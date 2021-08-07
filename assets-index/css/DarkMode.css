@@ -1,0 +1,123 @@
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+    transition: all 750ms;
+    transition-delay: 0;
+}
+
+html[data-theme="dark"] {
+    background-color: var(--black-background);
+}
+
+html[data-theme="dark"] .page-loader {
+    background-color: var(--black-background);
+}
+
+html[data-theme="dark"] .header {
+    background-color: var(--black-background);
+}
+
+html[data-theme="dark"] .user-action__menu,
+html[data-theme="dark"] .user-action__menu::before {
+    background-color: var(--text-color);
+}
+
+html[data-theme="dark"] .user-action__menu-heading {
+    color: var(--white-color);
+}
+
+html[data-theme="dark"] .user-action__menu-item-img {
+    color: #909090;
+}
+
+html[data-theme="dark"] .user-action__menu-item-link {
+    color: #888;
+}
+
+html[data-theme="dark"] .header__intro {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+html[data-theme="dark"] .service__header-content {
+    background-color: var(--black-background);
+    color: #FFFF00;
+}
+
+html[data-theme="dark"] .news__content {
+    background-color: var(--black-background);
+    color: #FF99FF;
+}
+
+html[data-theme="dark"] .box-news {
+    background-color: var(--black-background);
+    box-shadow: 2px 2px 30px rgba(255, 255, 255, 0.2);
+}
+
+html[data-theme="dark"] .detail-new__header-heading {
+    color: #8DEEEE;
+}
+
+html[data-theme="dark"] .detail-new__content-title,
+html[data-theme="dark"] .detail-new__date-time {
+    color: #e6e6e6;
+}
+
+html[data-theme="dark"] .rating__content {
+    background-color: var(--black-background);
+    color: #00FF7F;
+}
+
+html[data-theme="dark"] .wrapper__chat-box {
+    background-color: var(--black-background);
+}
+
+html[data-theme="dark"] .chat__action-input,
+html[data-theme="dark"] .chat__action-textarea {
+    background: #272727;
+    color: #c8c3bd;
+}
+
+html[data-theme="dark"] .chat__action-btn,
+html[data-theme="dark"] .wrapper__header-text,
+html[data-theme="dark"] .chat-box__label {
+    background: #930246;
+    color: #c8c3bd;
+}
+
+html[data-theme="dark"] .chat__desc-text {
+    color: #c8c3bd;
+}
+
+html[data-theme="dark"] .footer {
+    border-top: 4px solid #cccccc;
+}
+
+html[data-theme="dark"] .footer__heading {
+    color: #c8c3bd;
+}
+
+html[data-theme="dark"] .footer-item__link,
+html[data-theme="dark"] .footer__copyright {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+html[data-theme="dark"] .footer-item__link:hover {
+    color: var(--orange-color);
+}
+
+html[data-theme="dark"] .footer__bottom {
+    background-color: var(--black-background);
+}
+
+html[data-theme="dark"] .popup__box {
+    background-color: var(--black-background);
+}
+
+html[data-theme="dark"] .popup__box-header {
+    color: var(--white-color);
+}
+
+html[data-theme="dark"] .popup__box-label {
+    color: rgba(255, 255, 255, 0.5);
+}

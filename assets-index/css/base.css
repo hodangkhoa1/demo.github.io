@@ -1,0 +1,79 @@
+:root{
+    --bg1: #9b59b6;
+    --bg2: #3498db;
+    --text: #26ade4;
+    --text-color: #333;
+    --white-color: #fff;
+    --black-color: #000;
+    --navbar-height: 42px;
+    --header-height: 120px;
+    --header-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-height: 46px;
+    --header-home-height: 70px;
+    --header-mobile-horizontal-bar-height: 50px;
+    --orange-color:#f53e2d;
+    --star-gold-color: #FFCE3E;
+    --blue-btn-color: #0066CC;
+    --blue-hover-color: #3498db;
+    --header-color-1: #56d8e4;
+    --header-color-2: #9f01ea;
+    --error-message: red;
+    --header-background: #43CD80;
+    --black-background: #202020;
+
+
+    /*===== Login and regist form =====*/
+    --first-color: #1877f2;
+    --first-color-dark: #23004D;
+    --first-color-light: #A49EAC;
+    --first-color-lighten: #F2F2F2;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Responsive */
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+/* Tạm */
+.grid__column-2{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+
+.grid__column-2-5{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-10{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3333%;
+}
+
+/*Animation*/
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

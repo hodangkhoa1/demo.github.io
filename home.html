@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="200x138" href="./assets-index/img/Hồ Lê.svg">
+        <link rel="stylesheet" href="assets-index/css/home.css">
+        <link rel="stylesheet" href="assets-index/css/base.css">
+        <link rel="stylesheet" href="./assets-index/css/grid.css">
+        <link rel="stylesheet" href="./assets-index/css/responsive.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <script src="https://kit.fontawesome.com/6fc4afcc5d.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <title>Phòng khám Hồ Lê</title>
+    </head>
+    
+    <body>
+        <div class="page-loader"></div>
+
+        <div id="popup-box" class="popup-box">
+            <div class="popup__box">
+                <i class="fas fa-exclamation popup__box-icon"></i>
+                <h1 class="popup__box-header">Your account will be sign out!</h1>
+                <label class="popup__box-label">Are you sure to proceed?</label>
+                <div class="popup__box-btns">
+                    <div id="btn-cancel" class="popup__box-btn">
+                        <a href="#" class="popup__box-button">Cancel Process</a>
+                    </div>
+
+                    <div id="btn-signOut" class="popup__box-btn">
+                        <a href="#" class="popup__box-button">Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="app display-hidden">
+            <header class="header">
+                <div class="grid wide">
+                    <nav class="menu-bar hide-on-mobile-tablet">
+                        <ul class="header__navbar-list">
+                            <li class="header__navbar-item header__navbar-item--has-qr separate" onclick="location.href='index.html'">
+                                <div class="header__navbar-item-name">Phòng khám Hồ Lê</div>
+                                <div class="header__qr">
+                                    <img src="./assets-index/img/QR.png" alt="QR code" class="header__qr-img">
+                                </div>
+                            </li>
+                            <li class="header__navbar-item">
+                                <span class="title--no-pointer">Kết nối</span>
+                                <a href="https://www.facebook.com/myphuong.hothanh" target="_blank" class="header__navbar-icon-link"><i class="header__navbar-icon fab fa-facebook"></i></a>
+                                <a href="" class="header__navbar-icon-link"><i class="header__navbar-icon fas fa-envelope"></i></a>
+                            </li>
+                        </ul>
+
+                        <ul class="header__navbar-list">
+                            <li class="header__navbar-item header__navbar-item--has-notify">
+                                <a href="" class="header__navbar-item-link"><i class="header__navbar-icon far fa-bell"></i>Thông báo</a>
+                                <div class="header__notify">
+                                    <header class="header__notify-header">
+                                        <h3>Thông Báo Mới Nhận</h3>
+                                    </header>
+                                    <div class="header__notify-item">
+                                        <a>
+                                            <img src="./assets-index/img/nofitication.png" alt="Nofitication" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Đăng nhập để xem thông báo</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <footer class="header__notify-footer">
+                                        <button onclick="location.href='login.html'" type="button" class="footer-registration">Đăng Ký</button>
+                                        <button type="button" class="footer-login">Đăng Nhập</button>
+                                    </footer>
+                                </div>
+                            </li>
+
+                            <li class="header__navbar-item">
+                                <i class="header__navbar-icon far fa-question-circle"></i>
+                                <a href="Helpcenter.html" class="header__navbar-item-link">Trợ giúp</a>
+                            </li>
+
+                            <!--<li class="header__navbar-item separate">
+                                <a href="Registration.html" class="header__navbar-item-link">Đăng ký</a>
+                            </li>
+                            <li class="header__navbar-item">
+                                <a href="login.html" class="header__navbar-item-link">Đăng nhập</a>
+                            </li>-->
+
+                            <li class="header__navbar-item header__navbar-user">
+                                <div class="header__navbar-user" onclick = "menuToggle()">
+                                    <img src="./assets-index/img/CV1.jpg" alt="" class="header__navbar-user-img">
+                                    <span class="header__navbar-user-name">Khoa Hồ</span>
+                                </div>
+
+                                <!--<ul class="header__navbar-user-menu">
+                                    <li class="header__navbar-user-item">
+                                        <a href="">Tài khoản của tôi</a>
+                                    </li>
+
+                                    <li class="header__navbar-user-item">
+                                        <a href="">Đơn mua</a>
+                                    </li>
+
+                                    <li class="header__navbar-user-item">
+                                        <a href="">Đăng xuất</a>
+                                    </li>
+                                </ul>-->
+
+                                <div class="user-action__menu">
+                                    <h3 class="user-action__menu-heading">
+                                        Hồ Đăng Khoa
+                                        <span class="user-action__menu-heading-span">Tân Bình, TP.HCM</span>
+                                    </h3>
+    
+                                    <ul class="user-action__menu-list">
+                                        <li class="user-action__menu-item">
+                                            <i class="far fa-user-circle user-action__menu-item-img"></i>
+                                            <a href="#" class="user-action__menu-item-link">My Profile</a>
+                                        </li>
+    
+                                        <li class="user-action__menu-item">
+                                            <i class="far fa-edit user-action__menu-item-img"></i>
+                                            <a href="#" class="user-action__menu-item-link">Edit Profile</a>
+                                        </li>
+
+                                        <li class="user-action__menu-item">
+                                            <i class="far fa-question-circle user-action__menu-item-img"></i>
+                                            <a href="Helpcenter.html" class="user-action__menu-item-link">Đơn mua</a>
+                                        </li>
+    
+                                        <li id="dark-interface" class="user-action__menu-item">
+                                            <i class="fas fa-adjust user-action__menu-item-img"></i>
+                                            <a href="#" class="user-action__menu-item-link">
+                                                <label id="change-text" for="dark-checkbox" class="user-action__menu-item-label">Giao diện tối</label>
+                                            </a>
+
+                                            <input type="checkbox" hidden id="dark-checkbox" name="dark-theme">
+                                        </li>
+    
+                                        <li class="user-action__menu-item">
+                                            <i class="fas fa-cog user-action__menu-item-img"></i>
+                                            <a href="#" class="user-action__menu-item-link">Cài đặt</a>
+                                        </li>
+    
+                                        <li id="log-out" class="user-action__menu-item">
+                                            <i class="fas fa-sign-out-alt user-action__menu-item-img"></i>
+                                            <a href="#" class="user-action__menu-item-link">Đăng xuất</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <!-- Header with search-->
+                    <div class="header-search">
+                        <div class="header__mobile-search-menu">
+                            <label for="mobile-menu-checkbox" class="header__mobile-menu">             
+                                <i class="header__mobile-menu-icon fas fa-bars"></i>
+                            </label>
+    
+                            <label for="mobile-search-checkbox" class="header__mobile-search">
+                                <i class="header__mobile-search-icon fas fa-search"></i>
+                            </label>
+                        </div>
+
+                        <div class="header__logo hide-on-mobile-tablet">
+                            <a href="index.html" class="header__logo-link">
+                                <img src="./assets-index/img/Hồ Lê.svg" alt="" class="header__logo-img">
+                            </a>
+                        </div>
+
+                        <div class="header__logo-mobile hide-on-tablet">
+                            <a href="index.html" class="header__logo-mobile-link">
+                                <img src="./assets-index/img/Hồ Lê.svg" alt="" class="header__logo-mobile-img">
+                            </a>
+                        </div>
+
+                        <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-mobile">
+                        <input type="checkbox" hidden id="mobile-menu-checkbox" class="header__menu-mobile">
+
+                        <div class="header__search">
+                            <div class="header__search-input-wrap">
+                                <input type="text" class="header__search-input" placeholder="Tìm kiếm">
+
+                                <!-- Search history -->
+                                <div class="header__search-history">
+                                    <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                    <ul class="header__search-history-list">
+                                        <li class="header__search-history-item">
+                                            <a href="">Efferalgan 500mg</a>
+                                        </li>
+                                        <li class="header__search-history-item">
+                                            <a href="">Paradol extra</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="header__search-select">
+                                <span class="header__search-select-label">Trong shop</span>
+                                <i class="header__search-select-icon fas fa-angle-down"></i>
+
+                                <ul class="header__search-option">
+                                    <li class="header__search-option-item header__search-option-item--active">
+                                        <span>Trong shop</span>
+                                        <i class="fas fa-check"></i>
+                                    </li>
+                                    <li class="header__search-option-item">
+                                        <span>Ngoài shop</span>
+                                        <i class="fas fa-check"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="header__search-btn">
+                                <i class="header__search-btn-icon fas fa-search"></i>
+                            </button>
+                        </div>
+
+                        <div class="header__mobile">
+                            <div class="header__mobile-account">
+                                <a href="" class="header__mobile-account-link">
+                                    <img src="./assets-index/img/Male user.png" alt="" class="header__mobile-account-img">
+                                    <p class="header__mobile-account-name">Khoa Hồ</p>
+                                </a>
+                                <label for="mobile-menu-checkbox" class="header__mobile-account-close">
+                                    <i class="header__mobile-account-close-icon fas fa-times"></i>
+                                </label>
+                            </div>
+                            <ul class="mobile__menu-list">
+                                <li class="mobile__menu-item">
+                                    <a href="index.html" class="mobile__menu-link">
+                                        <i class="mobile__menu-icon fas fa-home"></i>
+                                        <div class="mobile__menu-name">Trang chủ</div>
+                                    </a>
+                                </li>
+    
+                                <li class="mobile__menu-item">
+                                    <a href="" class="mobile__menu-link">
+                                        <i class="mobile__menu-icon fas fa-clock"></i>
+                                        <div class="mobile__menu-name">Đặt lịch khám</div>
+                                    </a>
+                                </li>
+    
+                                <li class="mobile__menu-item">
+                                    <a href="" class="mobile__menu-link">
+                                        <i class="mobile__menu-icon fas fa-adjust"></i>
+                                        <div class="mobile__menu-name">Giao diện màu tối</div>
+                                    </a>
+                                </li>
+    
+                                <li class="mobile__menu-item">
+                                    <a href="" class="mobile__menu-link">
+                                        <i class="mobile__menu-icon fas fa-cog"></i>
+                                        <div class="mobile__menu-name">Cài đặt</div>
+                                    </a>
+                                </li>
+    
+                                <li class="mobile__menu-item">
+                                    <a href="" class="mobile__menu-link">
+                                        <i class="mobile__menu-icon fas fa-sign-out-alt"></i>
+                                        <div class="mobile__menu-name">Đăng xuất</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Cart(Giỏ hàng) layout -->
+                        <div class="header__cart">
+                            <div class="header__cart-wrap">
+                                <i class="header__cart-icon fas fa-shopping-cart"></i>
+                                <span class="header__cart-notice">3</span>
+                                
+                                <!-- No cart: header__cart-list--no-cart-->
+                                <div class="header__cart-list">
+                                    <img src="./assets-index/img/empty_product.svg" alt="No cart" class="header__cart-no-cart-img">
+                                    <span class="header__cart-list--no-cart-msg">
+                                        Chưa có sản phẩm
+                                    </span>
+
+                                    <!-- Has cart -->
+                                    <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                    <ul class="header__cart-list-item">
+                                        <!--Cart item-->
+                                        <li class="header__cart-item">
+                                            <img src="./assets-index/img/Para 500mg.jpg" alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Paracetamol 500mg</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">32.500đ</span>
+                                                        <span class="header__cart-item-multiply">x</span>
+                                                        <span class="header__cart-item-qnt">2</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-remove">Xóa</span>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="header__cart-item">
+                                            <img src="./assets-index/img/Panadol_Extra.svg" alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Panadol Extra</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">175.000đ</span>
+                                                        <span class="header__cart-item-multiply">x</span>
+                                                        <span class="header__cart-item-qnt">2</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-remove">Xóa</span>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="header__cart-item">
+                                            <img src="./assets-index/img/antibio.svg" alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Antibio Pro</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">570.000đ</span>
+                                                        <span class="header__cart-item-multiply">x</span>
+                                                        <span class="header__cart-item-qnt">2</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-remove">Xóa</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <button class="header__cart-view-cart header__cart-view-btn">Xem Giỏ Hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu mobile -->
+                    <!--<div class="header__mobile-menu-overlay"></div>-->
+                </div>
+
+                <ul class="header__sort-bar">
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Phổ biến</a>
+                    </li>
+
+                    <li class="header__sort-item header__sort-item--active">
+                        <a href="" class="header__sort-link">Mới nhất</a>
+                    </li>
+
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Bán chạy</a>
+                    </li>
+
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Giá</a>
+                    </li>
+
+                </ul>
+            </header>
+
+            <div class="app__container">
+                <div class="grid wide">
+                    <div class="row sm-gutter app__content">
+                        <div class="col l-2 m-0 c-0">
+                            <nav class="category">
+                                <h3 class="category__heading">
+                                    <i class="category__heading-icon fas fa-list"></i>
+                                    Danh mục
+                                </h3>
+            
+                                <ul class="category-list">
+                                    <li class="category-item category-item--active">
+                                        <a href="#" class="category-item__link">Thuốc bán chạy</a>
+                                    </li>
+                                    <li class="category-item">
+                                        <a href="#" class="category-item__link">Thuốc trị đau họng</a>
+                                    </li>
+                                    <li class="category-item">
+                                        <a href="#" class="category-item__link">Thuốc trị đau đầu</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+    
+                        <div class="col l-10 m-12 c-12">
+                            <div class="home-filter hide-on-mobile-tablet">
+                                <span class="home-filter__label">Sắp xếp theo</span>
+                                <button class="home-filter__btn home-filter__btn-click">Phổ biến</button>
+                                <button class="home-filter__btn home-filter__btn-click home-filter__btn-choose">Mới nhất</button>
+                                <button class="home-filter__btn home-filter__btn-click">Bán chạy</button>
+
+                                <div class="select-input">
+                                    <span class="select-input__label">Giá</span>
+                                    <i class="select-input__icon fas fa-angle-down"></i>
+
+                                    <!--List options-->
+                                    <ul class="select-input__list">
+                                        <li class="select-input__item">
+                                            <a href="" class="select-input__link">Giá: Thấp đến cao</a>
+                                        </li>
+                                        <li class="select-input__item">
+                                            <a href="" class="select-input__link">Giá: Cao đến thấp</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="home-filter__page">
+                                    <span class="home-filter__page-num">
+                                        <span class="home-filter__page-current">1</span>/2
+                                    </span>
+
+                                    <div class="home-filter__page-control">
+                                        <a id="disable-link" href="/" class="home-filter__page-btn home-filter__page-btn--disabled">
+                                            <i class="home-filter__page-icon fas fa-angle-left"></i>
+                                        </a>
+                                        <a href="#" class="home-filter__page-btn">
+                                            <i class="home-filter__page-icon fas fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <nav class="mobile-category">
+                                <ul class="mobile-category__list">
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Thuốc bổ sung canxi</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Thuốc trị đau họng</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Thuốc trị đau khớp</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Thuốc trị rối loạn tiêu hóa</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Thuốc hạ sốt trẻ em</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Thuốc sát trùng tay nhanh</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Thuốc nhỏ mắt ( cận thị )</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Thuốc da liễu trị mụn</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Thuốc giảm đau dạ dày</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Thuốc chống dị ứng</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Thuốc chống giun sán</a>
+                                    </li>
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Thuốc mát gan bổ thận</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <div id="page-product-1" class="home-product hide">
+                                <!-- Grid -> row -> column -->
+                                <div id="product-item" class="row sm-gutter">
+                                    <!--Product item-->
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/OFLOXACIN200mg.jpg);"></div>
+                                            <div id="name-product" class="home-product-item__about"></div>
+                                            <h4 id="name-product" class="home-product-item__name">Thuốc OFLOXACIN 200mg kháng sinh, chống nhiễm khuẩn, kháng virus</h4>
+                                            <div id="product-price" class="home-product-item__price">
+                                                <span class="home-product-item__price-old">53.000đ</span>
+                                                <span class="home-product-item__price-current">45.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 3,3k</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">10%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/Nicbesolvin4mg.jpg);"></div>
+                                            <h4 class="home-product-item__name">Thuốc loãng đờm, thông thoáng đường thở Nicbesolvin – 4mg làm thông thoáng đường thở</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">150.000đ</span>
+                                                <span class="home-product-item__price-current">120.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 15,3k</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">20%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/Dextromethorphan.jpg);"></div>
+                                            <h4 class="home-product-item__name">Thuốc giảm ho, điều trị ho không có đờm Dextromethorphan 15mg</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">54.000đ</span>
+                                                <span class="home-product-item__price-current">39.420đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 1,8k</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">27%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/Pepevit50mg.jpg);"></div>
+                                            <h4 class="home-product-item__name">Pepevit 50mg là sản phẩm thuộc nhóm thuốc bổ – vitamin và khoáng chất.</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">6.300đ</span>
+                                                <span class="home-product-item__price-current">5.985đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 14,3k</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">5%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/VitaminC250mg.jpg);"></div>
+                                            <h4 class="home-product-item__name">Imexpharm Vitamin C 250mg điều trị bệnh thiếu vitamin C</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">93,500đ</span>
+                                                <span class="home-product-item__price-current">46.750đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 5k</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">50%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/PanadolExtra.jpg);"></div>
+                                            <h4 class="home-product-item__name">Thuốc Panadol Extra giảm đau và hạ sốt</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">214.000đ</span>
+                                                <span class="home-product-item__price-current">117.700đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 208,3k</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">45%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/Efferalgan500mg.jpg);"></div>
+                                            <h4 class="home-product-item__name">Viên sủi giảm đau, hạ sốt Efferalgan 500mg</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">46.000đ</span>
+                                                <span class="home-product-item__price-current">45.540đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 1,1tr</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">1%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/CodatuxSyrup.jpg);"></div>
+                                            <h4 class="home-product-item__name">Siro giảm ho khan, ho gió, ho có đàm Codatux 5ml 30 gói</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">49.000đ</span>
+                                                <span class="home-product-item__price-current">45.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 40,3k</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">8%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/Calcidin600mg.jpg);"></div>
+                                            <h4 class="home-product-item__name">Viên Uống Ngăn Ngừa Loãng Xương Calcidin (Hộp 56 Viên)</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">280.000đ</span>
+                                                <span class="home-product-item__price-current">182.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 80,3k</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">35%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/Eugica.jpg);"></div>
+                                            <h4 class="home-product-item__name">Thuốc ho, làm dịu cơn ho Eugica xanh hộp 100 viên</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">70.000đ</span>
+                                                <span class="home-product-item__price-current">58.800đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 182,6k</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">16%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="page-product-2" class="home-product hide">
+                                <!-- Grid -> row -> column -->
+                                <div class="row sm-gutter">
+                                    <!--Product item-->
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/Lornine.jpg);"></div>
+                                            <h4 class="home-product-item__name">Lornine Loratadine 10Mg giảm các triệu chứng của các bệnh dị ứng như bệnh viêm mũi dị ứng bao gồm hắt hơi, sổ mũi và ngứa mũi</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">111.000đ</span>
+                                                <span class="home-product-item__price-current">55.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 35,3k</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">50%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/VitaminC500mg.jpg);"></div>
+                                            <h4 class="home-product-item__name">Vitamin C 500mg điều trị bệnh do thiếu Vitamin C như mệt mỏi do cảm cúm hoặc sau khi ốm</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">98.000đ</span>
+                                                <span class="home-product-item__price-current">96.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 15,3k</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">2%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/Rohto.jpg);"></div>
+                                            <h4 class="home-product-item__name">Thuốc nhỏ mắt - V.ROHTO giúp giữ ẩm cho mắt, phòng bệnh về mắt</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">53.000đ</span>
+                                                <span class="home-product-item__price-current">38.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 1,8tr</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">27%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/GinkgoBiloba2000.jpg);"></div>
+                                            <h4 class="home-product-item__name">Bổ não Ginkgo Biloba Healthy Care Úc 2000 giúp cải thiện trí nhớ và chức năng nhận thức.</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">220.000đ</span>
+                                                <span class="home-product-item__price-current">209.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 740,3k</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">5%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/VitaminC\ 250mg.jpg);"></div>
+                                            <h4 class="home-product-item__name">Imexpharm Vitamin C 250mg điều trị bệnh thiếu vitamin C</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">93,500đ</span>
+                                                <span class="home-product-item__price-current">46.750đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 5k</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">50%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/Panadol\ Extra.jpg);"></div>
+                                            <h4 class="home-product-item__name">Thuốc Panadol Extra giảm đau và hạ sốt</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">214.000đ</span>
+                                                <span class="home-product-item__price-current">117.700đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 208,3k</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">45%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/Efferalgan\ 500mg.jpg);"></div>
+                                            <h4 class="home-product-item__name">Viên sủi giảm đau, hạ sốt Efferalgan 500mg</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">46.000đ</span>
+                                                <span class="home-product-item__price-current">45.540đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 1,1tr</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">1%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/Codatux\ syrup.jpg);"></div>
+                                            <h4 class="home-product-item__name">Siro giảm ho khan, ho gió, ho có đàm Codatux 5ml 30 gói</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">49.000đ</span>
+                                                <span class="home-product-item__price-current">45.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 40,3k</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">8%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/Calcidin\ 600\ mg.jpg);"></div>
+                                            <h4 class="home-product-item__name">Viên Uống Ngăn Ngừa Loãng Xương Calcidin (Hộp 56 Viên)</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">280.000đ</span>
+                                                <span class="home-product-item__price-current">182.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 80,3k</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">35%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="">
+                                            <div class="home-product-item__img" style="background-image: url(./assets-index/img/Eugica.jpg);"></div>
+                                            <h4 class="home-product-item__name">Thuốc ho, làm dịu cơn ho Eugica xanh hộp 100 viên</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">70.000đ</span>
+                                                <span class="home-product-item__price-current">58.800đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">Đã bán 182,6k</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand"></span>
+                                                <span class="home-product-item__origin-name">TP. Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-of">
+                                                <span class="home-product-item__sale-of-percent">16%</span>
+                                                <span class="home-product-item__sale-of-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul class="pagination home-product__pagination">
+                                <!--<li class="pagination-item">
+                                    <span class="pagination-item__link">
+                                        <i class="pagination-item__icon fas fa-angle-left"></i>
+                                    </span>
+                                </li>
+
+                                <li class="pagination-item pagination-item--active">
+                                    <span class="pagination-item__link">1</span>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <span class="pagination-item__link">2</span>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <span class="pagination-item__link">3</span>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <span class="pagination-item__link">4</span>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <span class="pagination-item__link">5</span>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <span class="pagination-item__link">...</span>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <span class="pagination-item__link">14</span>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <span class="pagination-item__link">
+                                        <i class="pagination-item__icon fas fa-angle-right"></i>
+                                    </span>
+                                </li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-up-page"></div>
+
+            <div class="chat-box">
+                <input type="checkbox" id="icon-click" class="chat-box__click" hidden>
+                <div class="chat-box__control">
+                    <label for="icon-click" class="chat-box__label">
+                        <i class="chat-box__icon-messenger fab fa-facebook-messenger"></i>
+                        <i class="chat-box__icon-times fas fa-times"></i>
+                    </label>
+                </div>
+
+                <div class="wrapper">
+                    <div class="wrapper__header-text">Trực tuyến</div>
+                    <div class="wrapper__chat-box">
+                        <div class="chat__desc-text">Bạn vui lòng điền vào biểu mẫu dưới đây để nói chuyện với nhân viên đang trực tiếp.</div>
+                        <form action="#" class="chat__action" id="chat-form" method="POST">
+                            <div class="chat__action-field">
+                                <input id="fullname" name="fullname" class="chat__action-input" type="text" placeholder="Tên của bạn">
+                                <span class="form-message"></span>
+                            </div>
+
+                            <div class="chat__action-field">
+                                <input id="email" name="email" class="chat__action-input" type="email" placeholder="Email của bạn">
+                                <span class="form-message"></span>
+                            </div>
+
+                            <div class="chat__action-field chat__action-field-textarea">
+                                <textarea id="text-content" name="text-content" class="chat__action-textarea" cols="30" rows="10" placeholder="Nội dung..."></textarea>
+                                <span class="form-message"></span>
+                            </div>
+
+                            <button class="chat__action-btn">Start chat</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="grid wide footer__mobile-content">
+                    <div class="row">
+                        <div class="col l-2-4 m-4 c-6">
+                            <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                    <a href="Helpcenter.html" class="footer-item__link">Trung tâm trợ giúp</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Tư vấn khách hàng</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col l-2-4 m-4 c-6">
+                            <h3 class="footer__heading">Phòng khám Hồ Lê</h3>
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                    <a href="IntroductionHL.html" class="footer-item__link">Giới thiệu Hồ Lê</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="Comingsoon.html" class="footer-item__link">Tuyển dụng nhân viên</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Điều khoản Phòng khám</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col l-2-4 m-4 c-6">
+                            <h3 class="footer__heading">Danh mục</h3>
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                    <a href="index.html" class="footer-item__link">Trang chủ phòng khám</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="Schedule.html" class="footer-item__link">Đặt lịch khám</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="contact.html" class="footer-item__link">Liên hệ phòng khám</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col l-2-4 m-4 c-6">
+                            <h3 class="footer__heading">Theo dõi chúng tôi trên</h3>
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">
+                                        <i class="footer-item__icon fab fa-facebook"></i>
+                                        Facebook
+                                    </a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">
+                                        <i class="footer-item__icon fab fa-instagram"></i>
+                                        Instagram
+                                    </a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">
+                                        <i class="footer-item__icon fab fa-linkedin"></i>
+                                        LinkedIn
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col l-2-4 m-8 c-12">
+                            <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
+                            <div class="footer__download">
+                                <img src="./assets-index/img/QR.png" alt="QR Download" class="footer__download-qr">
+                                <div class="footer__download-apps">
+                                    <a href="" class="footer__download-app-link">
+                                        <img src="./assets-index/img/Appstore.png" alt="App Store" class="footer__download-app-img">
+                                    </a>
+                                    <a href="" class="footer__download-app-link">
+                                        <img src="./assets-index/img/google-play.png" alt="Google Play" class="footer__download-app-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__bottom">
+                    <div class="grid wide">
+                        <p class="footer__copyright">© 2020 Existing Hồ Lê website. All Rights Reserved | Design by Khoa Hồ</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script src="./assets-index/JavaScript/AllForm.js"></script>
+        <script src="./assets-index/JavaScript/validator.js"></script>
+        <script src="./assets-index/JavaScript/MainFile.js"></script>
+        <script>
+            Validator({
+                form: '#chat-form',
+                formGroupSelector: '.chat__action-field',
+                errorSelector: '.form-message',
+                errorFormMessage: '.form-message',
+                rules: [
+                    Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ'),
+                    Validator.isRequired('#email', 'Vui lòng nhập email của bạn'),
+                    Validator.isRequired('#text-content', 'Vui lòng nhập nội dung'),
+                ],
+                onSubmit: function (data){
+                    // Call API
+                    console.log(data);
+                }
+            })
+
+            $(document).ready(function(){
+                $(window).scroll(function(){
+                    if($(window).scrollTop() > 100){
+                        $('.scroll-up-page').css({
+                            "display":"block", "pointer-events":"auto"
+                        });
+                    }
+                    else{
+                        $('.scroll-up-page').css({
+                            "display":"none", "pointer-events":"none"
+                        });
+                    }
+                });
+
+                $('.scroll-up-page').click(function(){
+                    $('html').animate({scrollTop:0}, 500);
+                });
+            });
+        </script>
+    </body>
+</html>

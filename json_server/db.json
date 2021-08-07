@@ -1,0 +1,181 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "imageProduct": "/assets-index/img/OFLOXACIN200mg.jpg",
+      "name": "Thuốc OFLOXACIN 200mg kháng sinh, chống nhiễm khuẩn, kháng virus",
+      "priceOld": "53.000đ",
+      "priceCurrent": "45.000đ",
+      "muchSold": "3,3k",
+      "originName": "TP. Hồ Chí Minh",
+      "discount": "10%"
+    },
+    {
+      "imageProduct": "/assets-index/img/Nicbesolvin4mg.jpg",
+      "name": "Thuốc loãng đờm, thông thoáng đường thở Nicbesolvin – 4mg làm thông thoáng đường thở",
+      "priceOld": "150.000đ",
+      "priceCurrent": "120.000đ",
+      "muchSold": "15,3k",
+      "originName": "TP. Hồ Chí Minh",
+      "discount": "20%",
+      "id": 2
+    },
+    {
+      "imageProduct": "/assets-index/img/Dextromethorphan.jpg",
+      "name": "Thuốc giảm ho, điều trị ho không có đờm Dextromethorphan 15mg",
+      "priceOld": "54.000đ",
+      "priceCurrent": "39.420đ",
+      "muchSold": "1,8k",
+      "originName": "TP. Hồ Chí Minh",
+      "discount": "27%",
+      "id": 3
+    },
+    {
+      "imageProduct": "/assets-index/img/Pepevit50mg.jpg",
+      "name": "Pepevit 50mg là sản phẩm thuộc nhóm thuốc bổ – vitamin và khoáng chất.",
+      "priceOld": "6.300đ",
+      "priceCurrent": "5.985đ",
+      "muchSold": "14,3k",
+      "originName": "TP. Hồ Chí Minh",
+      "discount": "5%",
+      "id": 4
+    },
+    {
+      "imageProduct": "/assets-index/img/VitaminC250mg.jpg",
+      "name": "Imexpharm Vitamin C 250mg điều trị bệnh thiếu vitamin C",
+      "priceOld": "93,500đ",
+      "priceCurrent": "46.750đ",
+      "muchSold": "5k",
+      "originName": "TP. Hồ Chí Minh",
+      "discount": "50%",
+      "id": 5
+    },
+    {
+      "imageProduct": "/assets-index/img/PanadolExtra.jpg",
+      "name": "Thuốc Panadol Extra giảm đau và hạ sốt",
+      "priceOld": "214.000đ",
+      "priceCurrent": "117.700đ",
+      "muchSold": "208,3k",
+      "originName": "TP. Hồ Chí Minh",
+      "discount": "45%",
+      "id": 6
+    },
+    {
+      "imageProduct": "/assets-index/img/Efferalgan500mg.jpg",
+      "name": "Viên sủi giảm đau, hạ sốt Efferalgan 500mg",
+      "priceOld": "46.000đ",
+      "priceCurrent": "45.540đ",
+      "muchSold": "1,1tr",
+      "originName": "TP. Hồ Chí Minh",
+      "discount": "1%",
+      "id": 7
+    },
+    {
+      "imageProduct": "/assets-index/img/CodatuxSyrup.jpg",
+      "name": "Siro giảm ho khan, ho gió, ho có đàm Codatux 5ml 30 gói",
+      "priceOld": "49.000đ",
+      "priceCurrent": "45.000đ",
+      "muchSold": "40,3k",
+      "originName": "TP. Hồ Chí Minh",
+      "discount": "8%",
+      "id": 8
+    },
+    {
+      "imageProduct": "/assets-index/img/Calcidin600mg.jpg",
+      "name": "Viên Uống Ngăn Ngừa Loãng Xương Calcidin (Hộp 56 Viên)",
+      "priceOld": "280.000đ",
+      "priceCurrent": "182.000đ",
+      "muchSold": "80,3k",
+      "originName": "TP. Hồ Chí Minh",
+      "discount": "35%",
+      "id": 9
+    },
+    {
+      "imageProduct": "/assets-index/img/Eugica.jpg",
+      "name": "Thuốc ho, làm dịu cơn ho Eugica xanh hộp 100 viên",
+      "priceOld": "70.000đ",
+      "priceCurrent": "58.800đ",
+      "muchSold": "182,6k",
+      "originName": "TP. Hồ Chí Minh",
+      "discount": "16%",
+      "id": 10
+    },
+    {
+      "imageProduct": "/assets-index/img/Lornine.jpg",
+      "name": "Lornine Loratadine 10Mg giảm các triệu chứng của các bệnh dị ứng như bệnh viêm mũi dị ứng bao gồm hắt hơi, sổ mũi và ngứa mũi",
+      "priceOld": "111.000đ",
+      "priceCurrent": "55.000đ",
+      "muchSold": "35,3k",
+      "originName": "TP. Hồ Chí Minh",
+      "discount": "50%",
+      "id": 11
+    },
+    {
+      "imageProduct": "/assets-index/img/VitaminC500mg.jpg",
+      "name": "Vitamin C 500mg điều trị bệnh do thiếu Vitamin C như mệt mỏi do cảm cúm hoặc sau khi ốm",
+      "priceOld": "98.000đ",
+      "priceCurrent": "96.000đ",
+      "muchSold": "15,3k",
+      "originName": "TP. Hồ Chí Minh",
+      "discount": "2%",
+      "id": 12
+    },
+    {
+      "imageProduct": "/assets-index/img/Rohto.jpg",
+      "name": "Thuốc nhỏ mắt - V.ROHTO giúp giữ ẩm cho mắt, phòng bệnh về mắt",
+      "priceOld": "53.000đ",
+      "priceCurrent": "38.000đ",
+      "muchSold": "1,8tr",
+      "originName": "TP. Hồ Chí Minh",
+      "discount": "27%",
+      "id": 13
+    },
+    {
+      "imageProduct": "/assets-index/img/GinkgoBiloba2000.jpg",
+      "name": "Bổ não Ginkgo Biloba Healthy Care Úc 2000 giúp cải thiện trí nhớ và chức năng nhận thức",
+      "priceOld": "220.000đ",
+      "priceCurrent": "209.000đ",
+      "muchSold": "740,3k",
+      "originName": "TP. Hồ Chí Minh",
+      "discount": "5%",
+      "id": 14
+    }
+  ],
+  "News": [
+    {
+      "id": 1,
+      "imageNews": "/assets-index/img/cough.jpg",
+      "headingNew": "Trẻ bị ho? Sai lầm trong điều trị nhiều phụ huynh mắc phải",
+      "titleNew": "Ho giúp làm sạch đường thở, tống xuất đàm, dịch tiết hoặc vật lạ lọt vào đường hô hấp của trẻ. Nếu thấy trẻ bị ho có kèm theo sốt, khó thở, tím...",
+      "timeNew": "26/12/2020"
+    },
+    {
+      "imageNews": "/assets-index/img/ScarletFever.jpg",
+      "headingNew": "Bệnh sốt phát ban là gì? Những dấu hiệu và triệu chứng của sốt phát ban",
+      "titleNew": "Bệnh sốt phát ban là một bệnh nhiễm trùng nhẹ thường xảy ra ở trẻ em độ tuổi lên 2. Các dấu hiệu và triệu chứng bệnh thường quá nhẹ và khó có thể dễ dàng nhận thấy...",
+      "timeNew": "15/07/2020",
+      "id": 2
+    },
+    {
+      "imageNews": "/assets-index/img/fever.jpg",
+      "headingNew": "Trẻ bị sốt? Sai lầm trong khi chăm sóc nhiều phụ huynh mắc phải",
+      "titleNew": "Sốt là một triệu chứng thường gặp ở trẻ em. Khi bị sốt, nhiệt độ cơ thể bé tăng lên trên 38 độ C. Triệu chứng khi trẻ bị sốt: cảm thấy mệt mỏi, bé trở nên biếng ăn...",
+      "timeNew": "01/10/2020",
+      "id": 3
+    },
+    {
+      "imageNews": "/assets-index/img/Amidan.jpg",
+      "headingNew": "Viêm Amidan là gì? Nguyên nhân, triệu chứng và cách chữa trị",
+      "titleNew": "Viêm amidan là bệnh thường gặp trong các bệnh lý tai-mũi-họng ở trẻ em. Dấu hiệu nhận biết: Khô họng, hơi thở có mùi.Bệnh nhân bị các triệu chứng sưng, nóng...",
+      "timeNew": "10/01/2021",
+      "id": 4
+    },
+    {
+      "imageNews": "/assets-index/img/snivel.jpg",
+      "headingNew": "Sổ mũi ở trẻ em là gì? Nguyên nhân và cách chữa trị",
+      "titleNew": "Trẻ nhỏ có sức đề kháng yếu nên dễ mắc các bệnh đường hô hấp như sổ mũi.Việc điều trị sổ mũi ở trẻ em quan trọng nhất là cần can thiệp ngay từ khi trẻ mới bị để điều trị dứt điểm....",
+      "timeNew": "20/01/2021",
+      "id": 5
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Phần đầu-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="200x138" href="./assets-index/img/Hồ Lê.svg">
+        <link rel="stylesheet" href="assets-index/css/Comingsoon.css">
+        <link rel="stylesheet" href="./assets-index/css/sweetalert.css">
+        <link rel="stylesheet" href="assets-index/css/base.css">
+        <link rel="stylesheet" href="./assets-index/css/grid.css">
+        <link rel="stylesheet" href="./assets-index/css/responsive.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/6fc4afcc5d.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <title>Phòng khám Hồ Lê</title>
+    </head>
+
+    <body>
+        <div class="cs-wrapper">
+            <div class="cs__details">
+                <h1 class="cs__details-title">Coming Soon!</h1>
+                <h3 class="cs__details-intro">Chúng tôi đang làm việc chăm chỉ để mang đến cho bạn trải nghiệm tốt hơn</h3>
+                <p class="cs__details-description">Chúng tôi đang làm việc chăm chỉ và trang web có thể hoạt động rất sớm. Chúng tôi hứa, nó sẽ rất đáng để chờ đợi!</p>
+
+                <button id="backhomebtn" class="cs__details-btn">Back to home</button>
+            </div>
+
+            <div class="cs__details-picture">
+                <img src="./assets-index/img/under_construction.svg" alt="" class="cs__details-img">
+            </div>
+        </div>
+
+        <script>
+            const backHome = document.getElementById('backhomebtn');
+            backHome.addEventListener('click', function(){
+                setTimeout(function(){
+                    window.location = "index.html";
+                }, 10);
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,1442 @@
+/* Mobile & Tablet */
+
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+    }
+    .header__cart-list {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        width: 100%;
+        padding: 0 calc((100% - 644px) / 2);
+    }
+    .header__cart-list::after {
+        display: none;
+    }
+    .app__container {
+        margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
+    }
+    .header__sort-bar {
+        display: flex;
+    }
+    .app__content {
+        padding-top: 1px;
+    }
+    .mobile-category {
+        display: block;
+    }
+    .nav__bar-mobile {
+        display: flex;
+    }
+}
+
+
+/* Tablet */
+
+@media (min-width: 740px) and (max-width: 1023px) {
+     :root {
+        --navbar-height: 0;
+        --header-height: 68px;
+    }
+    .hide-on-tablet {
+        display: none;
+    }
+    .header__cart {
+        width: 80px;
+        text-align: right;
+    }
+    .header__search {
+        margin-top: 12px;
+    }
+    .header__cart {
+        margin-top: 12px;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 739px) {
+     :root {
+        --navbar-height: 0;
+        --header-height: 54px;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+    }
+    .hide-on-mobile {
+        display: none;
+    }
+    .scroll-up-page {
+        left: 47%;
+    }
+    /* Header Intro*/
+    .header__intro-image {
+        width: 100%;
+        margin-top: -30px;
+        height: 560px;
+    }
+    .header__intro-image-img {
+        width: 100%;
+    }
+    .header-search {
+        justify-content: space-between;
+    }
+    .header__logo-mobile {
+        display: block;
+        width: unset;
+        /*margin-top: 5px;*/
+    }
+    .header__intro-heading-label {
+        width: 100%;
+        text-align: center;
+        font-size: 3.8rem;
+        margin-top: 140px;
+    }
+    .header__intro-content-label {
+        font-size: 1.8rem;
+        margin-top: 30px;
+    }
+    .header__intro-btn-mobile {
+        display: flex;
+        justify-content: center;
+    }
+    .header__intro-btn-click-mobile {
+        position: relative;
+        width: 200px;
+        padding: 15px 0;
+        text-align: center;
+        margin: 20px 10px;
+        border-radius: 25px;
+        font-size: 1.7rem;
+        font-weight: 500;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        text-transform: uppercase;
+        outline: none;
+        overflow: hidden;
+    }
+    .header__intro-btn-click-mobile:nth-child(1) {
+        background: linear-gradient(-90deg, #f5ce62, #e85a19, #f5ce62, #f5ce62, #e85a19);
+        background-size: 400%;
+    }
+    .header__intro-btn-click-mobile:nth-child(2) {
+        background: linear-gradient(90deg, #0162c8, #55e7fc, #0162c8, #0162c8, #55e7fc);
+        background-size: 400%;
+    }
+    /*Scroll down box*/
+    .scroll-down-box {
+        left: 50%;
+        transform: translate(-50% -50%);
+    }
+    /* Phần dịch vụ ở index.html */
+    .service__header-mobile {
+        display: block;
+    }
+    .service__header-content-mobile {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-top: 100px;
+        font-size: 2.2rem;
+        color: #07306c;
+        text-align: center;
+    }
+    .service-container {
+        width: 100%;
+        display: flex;
+        position: relative;
+        max-width: 290px;
+        flex-direction: column;
+        margin: 20px auto;
+        padding: 20px 0;
+        left: 7.4%;
+    }
+    .service-card {
+        width: 300px;
+        height: auto;
+        flex-direction: column;
+        background: transparent;
+        margin: -20px 0;
+        box-shadow: none;
+        left: -11%;
+    }
+    .service-container .service-card .service-card__image {
+        position: relative;
+    }
+    .service-container .service-card .service-card__image,
+    .service-container .service-card:hover .service-card__image {
+        width: 80%;
+        height: 200px;
+        top: 100px;
+        left: 10%;
+    }
+    .service-container .service-card:hover .service-card__image {
+        top: 80px;
+    }
+    .service-container .service-card .service-card__image .service-card__image-img,
+    .service-container .service-card:hover .service-card__image .service-card__image-img {
+        max-width: 100px;
+    }
+    .service-container .service-card .service-card__content {
+        position: relative;
+        width: 100%;
+        background: #84CEEB;
+        /*#5AB9EA*/
+        box-shadow: none;
+        border-radius: 20px;
+        border-top: 100px solid #84CEEB;
+        padding: 20px 40px;
+    }
+    .service-card__content-heading {
+        text-align: center;
+        font-size: 3.2rem;
+    }
+    .service-card__content-paragraph {
+        font-size: 2rem;
+    }
+    .service-card__content-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Phần news ở index.html */
+    .news-mobile {
+        display: block;
+    }
+    .news__heading-mobile {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 100px;
+        font-size: 2.4rem;
+        color: #07306c;
+        text-align: center;
+        position: relative;
+    }
+    .news__border-mobile {
+        position: absolute;
+        width: 149px;
+        height: 2px;
+        background: #036db8;
+        margin-top: 10px;
+        left: 30%;
+    }
+    .box-news {
+        width: 373px;
+        margin: 50px 5px;
+    }
+    .detail-new__header-heading {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+    .detail-new__content-title {
+        margin: 15px 10px;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+    .detail-new__date-time {
+        font-size: 1.6rem;
+        margin-right: 20px;
+    }
+    /*Phần đánh giá ở index.html*/
+    .rating-mobile {
+        display: block;
+    }
+    .rating__heading-mobile {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 100px;
+        font-size: 2.4rem;
+        color: #07306c;
+        text-align: center;
+        position: relative;
+    }
+    .rating__border-mobile {
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        background: #036db8;
+        margin-top: 10px;
+        left: 34%;
+    }
+    .rating-reviews {
+        overflow-y: hidden;
+        margin: 36px auto;
+    }
+    .rating__review {
+        margin: 0 75px;
+    }
+    .rating__review:last-child {
+        margin-right: 80px;
+    }
+    /*Box Chat*/
+    .wrapper {
+        max-width: 320px;
+        right: 27px;
+    }
+    .wrapper__chat-box {
+        padding: 10px;
+    }
+    .chat__desc-text {
+        font-size: 1.4rem;
+    }
+    .chat__action {
+        padding: 10px;
+    }
+    .chat__action-field {
+        height: 45px;
+        margin-top: 20px;
+    }
+    .chat__action-input {
+        margin-bottom: -4px;
+    }
+    .chat__action-textarea {
+        margin-bottom: -10px;
+    }
+    .chat__action-btn {
+        height: 45px;
+    }
+    .chat__action-textarea {
+        padding: 10px 20px;
+    }
+    /* Header ở Help center */
+    .nav__bar-help-logo-link {
+        margin: 0 0 0 20px;
+    }
+    .nav__bar-logo-title {
+        font-size: 2.3rem;
+        margin: 0 0 0 5px;
+    }
+    .nav__bar-search {
+        margin-right: 15px;
+    }
+    .Helpcenter-body {
+        margin-top: 100px;
+    }
+    .helpcenter__header-heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 20px 0;
+        font-size: 2.8rem;
+    }
+    .Helpcenter__search-icon {
+        font-size: 2rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-780%, -50%);
+    }
+    .Helpcenter__search-input {
+        width: 350px;
+        height: 50px;
+    }
+    .Helpcenter__option {
+        left: 50%;
+        transform: translateX(-56%);
+    }
+    .Helpcenter__option-2 {
+        margin-left: 59px;
+    }
+    .Helpcenter__option-3 {
+        right: 50%;
+        transform: translateX(49%);
+    }
+    /* Header ở Help center */
+    .nav__bar-help-logo-link {
+        margin: 0 0 0 20px;
+    }
+    .nav__bar-logo-title {
+        font-size: 2.3rem;
+        margin: 0 0 0 5px;
+    }
+    .nav__bar-search {
+        margin-right: 15px;
+    }
+    .Helpcenter-body {
+        margin-top: 100px;
+    }
+    .helpcenter__header-heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 20px 0;
+        font-size: 2.8rem;
+    }
+    .Helpcenter__search-icon {
+        font-size: 2rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-780%, -50%);
+    }
+    .Helpcenter__search-input {
+        width: 350px;
+        height: 50px;
+    }
+    .Helpcenter__option {
+        left: 50%;
+        transform: translateX(-56%);
+    }
+    .Helpcenter__option-2 {
+        margin-left: 59px;
+    }
+    .Helpcenter__option-3 {
+        right: 50%;
+        transform: translateX(49%);
+    }
+    /*Body content ở phần Giới thiệu Hồ Lê*/
+    .introduction-form {
+        width: 100%;
+        margin: -30px 0 0 0;
+    }
+    .intro-form__body-content,
+    .intro-form__body-list {
+        font-size: 1.4rem;
+    }
+    .nav__bar-logo-mobile {
+        display: block;
+        width: unset;
+    }
+    .header__cart {
+        width: unset;
+        margin-top: 3px;
+        margin-right: 12px;
+    }
+    .header__mobile-search-menu {
+        display: block;
+        margin-top: -8px;
+    }
+    .header__search {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        height: 46px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        z-index: 1;
+        padding: 0 16px;
+        animation: mobileSideIn linear 0.3s;
+        display: none;
+    }
+    .header__search-history {
+        position: fixed;
+        width: 100%;
+        top: calc(var(--header-height) + var(--header-sort-bar-height));
+        left: 0;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+    .header__search-select {
+        display: none;
+    }
+    .pagination-item {
+        margin: 0;
+    }
+    .pagination-item__link {
+        height: 28px;
+        font-size: 1.6rem;
+        min-width: 36px;
+    }
+    .app__content {
+        margin: 0 4px;
+    }
+    .footer__mobile-content {
+        padding: 0 16px;
+    }
+    .footer__heading {
+        text-align: center;
+    }
+    .footer-item__link,
+    .footer__download {
+        justify-content: center;
+    }
+    .footer__download-apps {
+        flex: unset;
+    }
+    .footer__download-app-link {
+        display: block;
+        padding: 6px 8px;
+    }
+    .header__intro-mobile {
+        display: block;
+    }
+    .user__mobile {
+        display: block;
+    }
+    /*.news__header-img ở file main.css*/
+    /* .news__header-img {
+        margin-left: 1.7px;
+    }
+    .news__container-title {
+        margin-left: 1px;
+        text-align: center;
+    }
+    .news__container-time {
+        margin-right: 5px;
+    } */
+    /* Service container */
+    /* .service__container {
+        left: 2px;
+        width: 280px;
+        height: 280px;
+    }
+    .service__container-heading {
+        font-size: 3rem;
+        line-height: 10px;
+    }
+    .service__container-title {
+        font-size: 2rem;
+    }
+    .header__intro-mobile {
+        width: 100%;
+        margin-left: 1.6px;
+    } */
+    /*About form*/
+    .wrapper-card__content {
+        flex-direction: column;
+    }
+    .wrapper-card__content-right {
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+    }
+    @keyframes mobileSideIn {
+        from {
+            opacity: 0;
+            top: calc(var(--header-height) / 2);
+        }
+        to {
+            opacity: 1;
+            top: var(--header-height);
+        }
+    }
+    @keyframes mobileSideOut {
+        from {
+            opacity: 1;
+            top: var(--header-height);
+        }
+        to {
+            opacity: 0;
+            top: calc(var(--header-height) / 2);
+        }
+    }
+    /*Menu mobile*/
+    .menu__mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: 100%;
+        background-color: var(--white-color);
+        transform: translateX(-100%);
+        transition: transform linear 0.2s, opacity linear 0.2s;
+        opacity: 0;
+        z-index: 2;
+        -webkit-tap-highlight-color: transparent;
+        border-radius: 0 0 2px 2px;
+        border: 1px solid rgba(100, 100, 100, 0.4);
+        box-shadow: 0 3px 8px rgb(0 0 0 / 25%);
+    }
+    .nav__menu-mobile:checked~.menu__mobile {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .menu__mobile-header {
+        position: absolute;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        border-bottom: 2px solid #e5e5e5;
+        position: relative;
+    }
+    .menu__mobile-header-heading {
+        color: #FF3333;
+        position: absolute;
+        font-size: 2.5rem;
+        top: 1.6rem;
+        left: 2.8rem;
+        user-select: none;
+    }
+    .menu__mobile-header-close {
+        position: absolute;
+        top: 35%;
+        border: none;
+        right: 2.4rem;
+        cursor: pointer;
+    }
+    .menu__mobile-header-close-icon {
+        width: 16px;
+        height: 16px;
+    }
+    .menu__mobile-list {
+        margin-top: 25px;
+        list-style: none;
+        padding-left: 0;
+    }
+    .menu__mobile-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px 0 15px 20px;
+        cursor: pointer;
+    }
+    .menu__mobile-item:hover {
+        background-color: #EEEEEE;
+    }
+    .menu__mobile-link {
+        position: relative;
+        text-decoration: none;
+        color: #888;
+        display: inline-flex;
+        align-items: center;
+        margin-left: 8px;
+    }
+    .menu__mobile-link::after {
+        position: absolute;
+        content: '';
+        width: 375px;
+        height: 25px;
+        background: transparent;
+        margin-left: -8px;
+    }
+    .menu__mobile-name {
+        display: inline-block;
+        font-size: 1.8rem;
+        padding: 20px 16px;
+    }
+    .menu__mobile-icon {
+        width: 20px;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+
+/* Điện thoại di động, hiển thị chiều dọc */
+
+
+/* @media (max-width: 400px) {
+    /* .scroll-up-page {
+        left: 47%;
+    } */
+
+
+/* Header Intro*/
+
+
+/* .header__intro-image {
+        width: 100%;
+        margin-top: -30px;
+        height: 560px;
+    }
+    .header__intro-image-img {
+        width: 100%;
+    } */
+
+
+/* .header__intro-heading-label {
+        width: 100%;
+        text-align: center;
+        font-size: 3.8rem;
+        margin-top: 140px;
+    }
+    .header__intro-content-label {
+        font-size: 1.8rem;
+        margin-top: 30px;
+    }
+    .header__intro-btn-mobile {
+        display: flex;
+        justify-content: center;
+    }
+    .header__intro-btn-click-mobile {
+        position: relative;
+        width: 200px;
+        padding: 15px 0;
+        text-align: center;
+        margin: 20px 10px;
+        border-radius: 25px;
+        font-size: 1.7rem;
+        font-weight: 500;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        text-transform: uppercase;
+        outline: none;
+        overflow: hidden;
+    }
+    .header__intro-btn-click-mobile:nth-child(1) {
+        background: linear-gradient(-90deg, #f5ce62, #e85a19, #f5ce62, #f5ce62, #e85a19);
+        background-size: 400%;
+    }
+    .header__intro-btn-click-mobile:nth-child(2) {
+        background: linear-gradient(90deg, #0162c8, #55e7fc, #0162c8, #0162c8, #55e7fc);
+        background-size: 400%;
+    } */
+
+
+/*Scroll down box*/
+
+
+/* .scroll-down-box {
+        left: 50%;
+        transform: translate(-50% -50%);
+    } */
+
+
+/* Phần dịch vụ ở index.html */
+
+
+/* .service__header-mobile {
+        display: block;
+    }
+    .service__header-content-mobile {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-top: 100px;
+        font-size: 2.2rem;
+        color: #07306c;
+        text-align: center;
+    }
+    .service-container {
+        width: 100%;
+        display: flex;
+        position: relative;
+        max-width: 290px;
+        flex-direction: column;
+        margin: 20px auto;
+        padding: 20px 0;
+        left: 7.4%;
+    }
+    .service-card {
+        width: 300px;
+        height: auto;
+        flex-direction: column;
+        background: transparent;
+        margin: -20px 0;
+        box-shadow: none;
+        left: -11%;
+    }
+    .service-container .service-card .service-card__image {
+        position: relative;
+    }
+    .service-container .service-card .service-card__image,
+    .service-container .service-card:hover .service-card__image {
+        width: 80%;
+        height: 200px;
+        top: 100px;
+        left: 10%;
+    }
+    .service-container .service-card:hover .service-card__image {
+        top: 80px;
+    }
+    .service-container .service-card .service-card__image .service-card__image-img,
+    .service-container .service-card:hover .service-card__image .service-card__image-img {
+        max-width: 100px;
+    } */
+
+
+/* .service-container .service-card .service-card__content {
+        position: relative;
+        width: 100%;
+        background: #84CEEB;
+        #5AB9EA
+        box-shadow: none;
+        border-radius: 20px;
+        border-top: 100px solid #84CEEB;
+        padding: 20px 40px;
+    }
+    .service-card__content-heading {
+        text-align: center;
+        font-size: 3.2rem;
+    }
+    .service-card__content-paragraph {
+        font-size: 2rem;
+    }
+    .service-card__content-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+
+
+/* Phần news ở index.html */
+
+
+/* .news-mobile {
+        display: block;
+    }
+    .news__heading-mobile {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 100px;
+        font-size: 2.4rem;
+        color: #07306c;
+        text-align: center;
+        position: relative;
+    }
+    .news__border-mobile {
+        position: absolute;
+        width: 149px;
+        height: 2px;
+        background: #036db8;
+        margin-top: 10px;
+        left: 30%;
+    }
+    .box-news {
+        width: 373px;
+        margin: 50px 5px;
+    }
+    .detail-new__header-heading {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+    .detail-new__content-title {
+        margin: 15px 10px;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+    .detail-new__date-time {
+        font-size: 1.6rem;
+        margin-right: 20px;
+    } */
+
+
+/*Phần đánh giá ở index.html*/
+
+
+/* .rating-mobile {
+        display: block;
+    }
+    .rating__heading-mobile {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 100px;
+        font-size: 2.4rem;
+        color: #07306c;
+        text-align: center;
+        position: relative;
+    }
+    .rating__border-mobile {
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        background: #036db8;
+        margin-top: 10px;
+        left: 34%;
+    }
+    .rating-reviews {
+        overflow-y: hidden;
+        margin: 36px auto;
+    }
+    .rating__review {
+        margin: 0 75px;
+    }
+    .rating__review:last-child {
+        margin-right: 80px;
+    } */
+
+
+/*Box Chat*/
+
+
+/* .wrapper {
+        max-width: 320px;
+        right: 27px;
+    }
+    .wrapper__chat-box {
+        padding: 10px;
+    }
+    .chat__desc-text {
+        font-size: 1.4rem;
+    }
+    .chat__action {
+        padding: 10px;
+    }
+    .chat__action-field {
+        height: 45px;
+        margin-top: 20px;
+    }
+    .chat__action-input {
+        margin-bottom: -4px;
+    }
+    .chat__action-textarea {
+        margin-bottom: -10px;
+    }
+    .chat__action-btn {
+        height: 45px;
+    }
+    .chat__action-textarea {
+        padding: 10px 20px;
+    } */
+
+
+/* Header ở Help center */
+
+
+/* .nav__bar-help-logo-link {
+        margin: 0 0 0 20px;
+    }
+    .nav__bar-logo-title {
+        font-size: 2.3rem;
+        margin: 0 0 0 5px;
+    }
+    .nav__bar-search {
+        margin-right: 15px;
+    }
+    .Helpcenter-body {
+        margin-top: 100px;
+    }
+    .helpcenter__header-heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 20px 0;
+        font-size: 2.8rem;
+    }
+    .Helpcenter__search-icon {
+        font-size: 2rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-780%, -50%);
+    }
+    .Helpcenter__search-input {
+        width: 350px;
+        height: 50px;
+    }
+    .Helpcenter__option {
+        left: 50%;
+        transform: translateX(-56%);
+    }
+    .Helpcenter__option-2 {
+        margin-left: 59px;
+    }
+    .Helpcenter__option-3 {
+        right: 50%;
+        transform: translateX(49%);
+    } */
+
+
+/*Body content ở phần Giới thiệu Hồ Lê*/
+
+
+/* .introduction-form {
+        width: 100%;
+        margin: -30px 0 0 0;
+    }
+    .intro-form__body-content,
+    .intro-form__body-list {
+        font-size: 1.4rem;
+    } */
+
+
+/*} */
+
+@media (min-width: 400px) and (max-width: 600px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .scroll-up-page {
+        display: none !important;
+    }
+    /*Menu mobile*/
+    .menu__mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: 100%;
+        background-color: var(--white-color);
+        transform: translateX(-100%);
+        transition: transform linear 0.2s, opacity linear 0.2s;
+        opacity: 0;
+        z-index: 2;
+        -webkit-tap-highlight-color: transparent;
+        border-radius: 0 0 2px 2px;
+        border: 1px solid rgba(100, 100, 100, 0.4);
+        box-shadow: 0 3px 8px rgb(0 0 0 / 25%);
+    }
+    .nav__menu-mobile:checked~.menu__mobile {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .menu__mobile-header {
+        position: absolute;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        border-bottom: 2px solid #e5e5e5;
+        position: relative;
+    }
+    .menu__mobile-header-heading {
+        color: #FF3333;
+        position: absolute;
+        font-size: 2.5rem;
+        top: 1.6rem;
+        left: 2.8rem;
+        user-select: none;
+    }
+    .menu__mobile-header-close {
+        position: absolute;
+        top: 50%;
+        border: none;
+        right: 2.4rem;
+        cursor: pointer;
+        transform: translateY(-30%);
+    }
+    .menu__mobile-header-close-icon {
+        width: 18px;
+        height: 18px;
+    }
+    .menu__mobile-list {
+        margin-top: 25px;
+        list-style: none;
+        padding-left: 0;
+    }
+    .menu__mobile-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px 0 15px 20px;
+        cursor: pointer;
+    }
+    .menu__mobile-item:hover {
+        background-color: #EEEEEE;
+    }
+    .menu__mobile-link {
+        position: relative;
+        text-decoration: none;
+        color: #888;
+        display: inline-flex;
+        align-items: center;
+        margin-left: 8px;
+    }
+    .menu__mobile-link::after {
+        position: absolute;
+        content: '';
+        width: 375px;
+        height: 25px;
+        background: transparent;
+        margin-left: -8px;
+    }
+    .menu__mobile-name {
+        display: inline-block;
+        font-size: 1.8rem;
+        padding: 20px 16px;
+    }
+    .menu__mobile-icon {
+        width: 20px;
+        font-size: 2rem;
+        text-align: center;
+    }
+    /* Header Intro*/
+    .header__intro-image {
+        margin-top: -30px;
+        height: 658px;
+    }
+    .header__intro-heading-label {
+        width: 100%;
+        text-align: center;
+        font-size: 4.5rem;
+        margin-top: 200px;
+    }
+    .header__intro-content-label {
+        font-size: 1.8rem;
+        margin-top: 30px;
+    }
+    .header__intro-btn-mobile {
+        display: flex;
+        justify-content: center;
+    }
+    .header__intro-btn-click-mobile {
+        position: relative;
+        width: 200px;
+        padding: 15px 0;
+        text-align: center;
+        margin: 20px 10px;
+        border-radius: 25px;
+        font-size: 1.7rem;
+        font-weight: 500;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        text-transform: uppercase;
+        outline: none;
+        overflow: hidden;
+    }
+    .header__intro-btn-click-mobile:nth-child(1) {
+        background: linear-gradient(-90deg, #f5ce62, #e85a19, #f5ce62, #f5ce62, #e85a19);
+        background-size: 400%;
+    }
+    .header__intro-btn-click-mobile:nth-child(2) {
+        background: linear-gradient(90deg, #0162c8, #55e7fc, #0162c8, #0162c8, #55e7fc);
+        background-size: 400%;
+    }
+    /*Scroll down box*/
+    .scroll-down-box {
+        left: 50%;
+        transform: translate(-50% -50%);
+    }
+    /* Phần dịch vụ ở index.html */
+    .service__header-mobile {
+        display: block;
+    }
+    .service__header-content-mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        font-size: 2.4rem;
+        color: #07306c;
+        text-align: center;
+    }
+    .service-container {
+        display: flex;
+        position: relative;
+        max-width: 290px;
+        flex-direction: column;
+        margin: 20px auto;
+        padding: 20px 0;
+        left: 6.5%;
+    }
+    .service-card {
+        width: 300px;
+        height: auto;
+        flex-direction: column;
+        background: transparent;
+        margin: -20px 0;
+        box-shadow: none;
+        left: -11%;
+    }
+    .service-container .service-card .service-card__image {
+        position: relative;
+    }
+    .service-container .service-card .service-card__image,
+    .service-container .service-card:hover .service-card__image {
+        width: 80%;
+        height: 200px;
+        top: 100px;
+        left: 10%;
+    }
+    .service-container .service-card:hover .service-card__image {
+        top: 80px;
+    }
+    .service-container .service-card .service-card__image .service-card__image-img,
+    .service-container .service-card:hover .service-card__image .service-card__image-img {
+        max-width: 100px;
+    }
+    .service-container .service-card .service-card__content {
+        position: relative;
+        width: 100%;
+        background: #2ea8ff;
+        box-shadow: none;
+        border-radius: 20px;
+        border-top: 100px solid #2ea8ff;
+        padding: 20px 40px;
+    }
+    .service-card__content-heading {
+        text-align: center;
+        font-size: 3.2rem;
+    }
+    .service-card__content-paragraph {
+        font-size: 2rem;
+    }
+    .service-card__content-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Phần news ở index.html */
+    .news-mobile {
+        display: block;
+    }
+    .news__heading-mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        font-size: 2.4rem;
+        color: #07306c;
+        text-align: center;
+        position: relative;
+    }
+    .news__border-mobile {
+        position: absolute;
+        width: 148px;
+        height: 2px;
+        background: #036db8;
+        margin-top: 10px;
+        left: 32%;
+    }
+    .box-news {
+        width: 406px;
+        margin: 50px 3px;
+    }
+    .detail-new__header-heading {
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+    .detail-new__content-title {
+        margin: 15px 12px;
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+    }
+    .detail-new__date-time {
+        font-size: 1.6rem;
+        margin-right: 18px;
+    }
+    /*Phần đánh giá ở index.html*/
+    .rating-mobile {
+        display: block;
+    }
+    .rating__heading-mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        font-size: 2.4rem;
+        color: #07306c;
+        text-align: center;
+        position: relative;
+    }
+    .rating__border-mobile {
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        background: #036db8;
+        margin-top: 10px;
+        left: 35%;
+    }
+    .rating-reviews {
+        overflow-y: hidden;
+        margin: 36px auto;
+    }
+    .rating__review {
+        margin: 0 75px;
+    }
+    .rating__review:last-child {
+        margin-right: 80px;
+    }
+    /* Header ở Help center */
+    .nav__bar-help-logo-link {
+        margin: 0 0 0 20px;
+    }
+    .nav__bar-logo-title {
+        font-size: 2.3rem;
+        margin: 0 0 0 5px;
+    }
+    .nav__bar-search {
+        margin-right: 25px;
+    }
+    .Helpcenter-body {
+        margin-top: 100px;
+    }
+    .helpcenter__header-heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 20px 0;
+    }
+    .Helpcenter__search-icon {
+        font-size: 2rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-920%, -50%);
+    }
+    .Helpcenter__search-input {
+        margin-left: 5px;
+        width: 100%;
+        height: 50px;
+    }
+    .Helpcenter__option,
+    .Helpcenter__option-2,
+    .Helpcenter__option-3 {
+        width: 250px;
+        height: 290px;
+        margin: 50px 0;
+        display: block;
+        left: 50%;
+        transform: translateX(33%);
+    }
+    /*Body content ở phần Giới thiệu Hồ Lê*/
+    .introduction-form {
+        width: 100%;
+        margin: -30px 0 0 0;
+    }
+    .intro-form__body-content,
+    .intro-form__body-list {
+        font-size: 1.4rem;
+    }
+    /*Body ở phần Liên hệ với nhà thuốc*/
+    .contact__form {
+        margin: 55px 0;
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+    .contact__head-header {
+        font-size: 3rem;
+        padding: 15px;
+    }
+    .form-row {
+        display: block;
+    }
+    .form-group {
+        margin: 45px 0 !important;
+    }
+    .submit-btn .form-group {
+        width: 40%;
+    }
+}
+
+
+/* Điện thoại di động, hiển thị chiều ngang */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .hide-on-mobile-horizontal {
+        display: none;
+    }
+    /*Nav Bar*/
+    .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        height: var(--header-mobile-horizontal-bar-height);
+        background-color: #43CD80;
+    }
+    .nav__bar-mobile {
+        display: flex;
+        margin-top: 4px;
+    }
+    /* Header Intro*/
+    .header__intro-image {
+        margin-top: -65px;
+        width: 100%;
+        height: 290px;
+    }
+    .header__intro-heading-label {
+        font-size: 4.6rem;
+        margin-top: 35px;
+    }
+    .header__intro-content-label {
+        font-size: 1.8rem;
+        margin-top: 30px;
+    }
+    .header__intro-btn-mobile {
+        display: flex;
+        justify-content: center;
+    }
+    .header__intro-btn-click-mobile {
+        position: relative;
+        width: 200px;
+        padding: 15px 0;
+        text-align: center;
+        margin: 20px 10px;
+        border-radius: 25px;
+        font-size: 1.7rem;
+        font-weight: 500;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        text-transform: uppercase;
+        outline: none;
+        overflow: hidden;
+    }
+    .header__intro-btn-click-mobile:nth-child(1) {
+        background: linear-gradient(-90deg, #f5ce62, #e85a19, #f5ce62, #f5ce62, #e85a19);
+        background-size: 400%;
+    }
+    .header__intro-btn-click-mobile:nth-child(2) {
+        background: linear-gradient(90deg, #0162c8, #55e7fc, #0162c8, #0162c8, #55e7fc);
+        background-size: 400%;
+    }
+    /*Scroll down box*/
+    .scroll-down-box {
+        left: 50%;
+        bottom: 16%;
+        transform: translate(-50% -50%);
+    }
+    .scroll-down__Arrow {
+        width: 15px;
+        height: 15px;
+    }
+    /* Phần dịch vụ ở index.html */
+    .service-container {
+        display: flex;
+        position: relative;
+        width: 675px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: -160px 0 180px 20px;
+        padding: 20px 0;
+    }
+    .service-card {
+        width: 300px;
+        height: 335px;
+        background: transparent;
+        margin: 85px 0;
+        box-shadow: none;
+        left: -11%;
+    }
+    .service-container .service-card .service-card__image {
+        position: relative;
+    }
+    .service-container .service-card .service-card__image,
+    .service-container .service-card:hover .service-card__image {
+        width: 80%;
+        height: 200px;
+        top: 100px;
+        left: 10%;
+    }
+    .service-container .service-card:hover .service-card__image {
+        top: 80px;
+    }
+    .service-container .service-card .service-card__image .service-card__image-img,
+    .service-container .service-card:hover .service-card__image .service-card__image-img {
+        max-width: 100px;
+    }
+    .service-container .service-card .service-card__content {
+        position: relative;
+        width: 100%;
+        background: #2ea8ff;
+        box-shadow: none;
+        border-radius: 20px;
+        border-top: 100px solid #2ea8ff;
+        padding: 20px 40px;
+    }
+    .service-card__content-heading {
+        text-align: center;
+        font-size: 3.2rem;
+    }
+    .service-card__content-paragraph {
+        font-size: 2rem;
+    }
+    .service-card__content-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .row {
+        margin-left: -79px;
+        margin-right: -81px;
+    }
+}

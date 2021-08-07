@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Phần đầu-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="200x138" href="./assets-index/img/Hồ Lê.svg">
+        <link rel="stylesheet" href="./assets-index/css/Schedule.css">
+        <link rel="stylesheet" href="./assets-index/css/sweetalert.css">
+        <link rel="stylesheet" href="./assets-index/css/base.css">
+        <link rel="stylesheet" href="./assets-index/css/grid.css">
+        <link rel="stylesheet" href="./assets-index/css/responsive.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <script src="https://kit.fontawesome.com/6fc4afcc5d.js" crossorigin="anonymous"></script>
+        <title>Phòng khám Hồ Lê</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="container__heading">ĐẶT LỊCH KHÁM</header>
+
+            <div class="container__progress-bar">
+                <div class="container__progress-bar-step">
+                    <p class="container__progress-bar-name">Name</p>
+                    <div class="container__progress-bar-bullet">
+                        <span class="container__progress-bar-bullet-number">1</span>
+                    </div>
+
+                    <div class="container__progress-bar-check fas fa-check"></div>
+                </div>
+                <div class="container__progress-bar-step">
+                    <p class="container__progress-bar-name">Gender</p>
+                    <div class="container__progress-bar-bullet">
+                        <span class="container__progress-bar-bullet-number">2</span>
+                    </div>
+
+                    <div class="container__progress-bar-check fas fa-check"></div>
+                </div>
+                <div class="container__progress-bar-step">
+                    <p class="container__progress-bar-name">Contact</p>
+                    <div class="container__progress-bar-bullet">
+                        <span class="container__progress-bar-bullet-number">3</span>
+                    </div>
+
+                    <div class="container__progress-bar-check fas fa-check"></div>
+                </div>
+                <div class="container__progress-bar-step">
+                    <p class="container__progress-bar-name">Submit</p>
+                    <div class="container__progress-bar-bullet">
+                        <span class="container__progress-bar-bullet-number">4</span>
+                    </div>
+
+                    <div class="fas fa-check container__progress-bar-check"></div>
+                </div>
+            </div>
+
+            <div class="container__body">
+                <form action="#" method="POST" class="form__Registration" id="form-Registration">
+                    <div class="form__page slidepage">
+                        <div class="form__page-title">Thông tin cá nhân:</div>
+
+                        <div class="form-group">
+                            <div class="form__info options">
+                                <label for="firstname" class="form__page-label">First Name ( Tên của bạn )</label>
+                                <input id="firstname" name="firstname" rules="required" class="form__page-input" type="text" placeholder="Vd: Hồ">
+                            </div>
+                            <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form__info">
+                                <label for="lastname" class="form__page-label">Last name ( Họ của bạn )</label>
+                                <input id="lastname" name="lastname" rules="required" class="form__page-input" type="text" placeholder="Vd: Thanh Mỹ Phượng">
+                            </div>
+                            <span class="form-message"></span>
+                        </div>
+
+                        <!--<div class="form-group nextBtn">-->
+                            <button class="form__page-btn-next nextBtn">Next</button>
+                        <!--</div>-->
+                    </div>
+
+                    <div class="form__page">
+                        <div class="form__page-title">Thông tin cá nhân:</div>
+
+                        <div class="form-group">
+                            <div class="form__info">
+                                <label for="birthday" class="form__page-label">Ngày / tháng / năm sinh</label>
+                                <div class="form__page-date">
+                                    <input id="day" name="birthday" rules="required|day" class="form__page-input-date" type="text" placeholder="dd">
+                                    <input id="month" name="birthday" rules="required|month" class="form__page-input-date" type="text" placeholder="mm">
+                                    <input id="year" name="birthday" rules="required|year" class="form__page-input-date" type="text" placeholder="yyyy">
+                                </div>
+                            </div>
+                            <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form__info">
+                                <label for="gender" class="form__page-label">Giới tính</label>
+                                <select name="gender" id="gender" class="form__page-select">
+                                    <option value="">-- Chọn giới tính --</option>
+                                    <option value="Male">Nam</option>
+                                    <option value="Female">Nữ</option>
+                                    <option value="Other">Khác</option>
+                                </select>
+                            </div>
+                            <span class="form-message"></span>
+                        </div>
+
+                        <!--<div class="form-group">-->
+                            <button class="form__page-btn-Previous-1 previous-1">Previous</button>
+                            <button class="form__page-btn-next-1 next-1">Next</button>
+                        <!--</div>-->
+                    </div>
+
+                    <div class="form__page">
+                        <div class="form__page-title">Thông tin liên lạc:</div>
+
+                        <div class="form-group">
+                            <div class="form__info">
+                                <label for="email" class="form__page-label">Email</label>
+                                <input id="email" name="email" rules="required|email" class="form__page-input" type="text" placeholder="Vd: abc@gmail.com">
+                            </div>
+                            <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form__info">
+                                <label for="numberphone" class="form__page-label">Số điện thoại</label>
+                                <input id="numberphone" name="numberphone" rules="required|numberphone" class="form__page-input" type="text" placeholder="Vd: +09">
+                            </div>
+                            <span class="form-message"></span>
+                        </div>
+
+                        <!--<div class="form-group">-->
+                            <button class="form__page-btn-Previous-2 previous-2">Previous</button>
+                            <button class="form__page-btn-next-2 next-2">Next</button>
+                        <!--</div>-->
+                    </div>
+
+                    <div class="form__page">
+                        <div class="form__page-title">Đặt ngày giờ khám:</div>
+
+                        <div class="form-group">
+                            <div class="form__info">
+                                <label for="times" class="form__page-label">Giờ khám</label>
+                                <input id="times" name="times" rules="required|time" class="form__page-input" type="text" placeholder="--:-- --">
+                            </div>
+                            <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form__info">
+                                <label for="date" class="form__page-label">Ngày khám</label>
+                                <div class="form__page-date">
+                                    <input id="date" name="date" rules="required|date" class="form__page-input-date-month" type="text" placeholder="dd">
+                                    <input id="date-month" name="date" rules="required|date-month" class="form__page-input-date-month" type="text" placeholder="mm">
+                                </div>
+                            </div>
+                            <span class="form-message"></span>
+                        </div>
+
+                        <!--<div class="form-group">-->
+                            <button class="form__page-btn-Previous-3 previous-3">Previous</button>
+                            <button class="form__page-btn-submit submit">Submit</button>
+                        <!--</div>-->
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+        <!--<script src="./assets-index/JavaScript/validator.js"></script>-->
+        <script src="./assets-index/JavaScript/Schedule.js"></script>
+        <script src="./assets-index/JavaScript/sweetalert.min.js"></script>
+        <script>
+            /*Validator({
+                form: '#form-Registration',
+                formGroupSelector: '.form-group',
+                errorSelector: '.form-message',
+                rules: [
+                    Validator.isRequired('#firstname', 'Vui lòng nhập tên của bạn'),
+                    Validator.isRequired('#lastname', 'Vui lòng nhập họ của bạn'),
+                    Validator.isRequired('#gender', 'Vui lòng chọn giới tính của bạn'),
+                    Validator.isEmail('#email'),
+                    Validator.isCheckDay('#birthday', 'Vui lòng điền năm sinh của bạn'),
+                    Validator.isCheckDay('#date', 'Vui lòng điền ngày khám'),
+                    Validator.isCheckPhone('#numberphone', 'Vui lòng điền số điện thoại của bạn'),
+                    Validator.isTimes('#times', 'Vui lòng điền giờ khám'),
+                ],
+                onSubmit: function (data){
+                    // Call API
+                    console.log(data);
+                },
+            })*/
+        </script>
+    </body>
+</html>

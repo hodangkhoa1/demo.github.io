@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Phần đầu-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="200x138" href="./assets-index/img/Hồ Lê.svg">
+        <link rel="stylesheet" href="assets-index/css/login.css">
+        <link rel="stylesheet" href="./assets-index/css/sweetalert.css">
+        <link rel="stylesheet" href="assets-index/css/base.css">
+        <link rel="stylesheet" href="./assets-index/css/grid.css">
+        <link rel="stylesheet" href="./assets-index/css/responsive.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/6fc4afcc5d.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <title>Phòng khám Hồ Lê</title>
+    </head>
+
+    <body>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v9.0" nonce="1HGkfuMk"></script>
+
+        <div class="login">
+
+            <div class="login__content">
+                <div class="login__img">
+                    <img src="./assets-index/img/Login-form.jpg" alt="" class="login__img-image">
+                </div>
+
+                <div class="login__forms">
+                    <form action="" method="POST" class="login__registre" id="login-in">
+                        <h1 class="login__title">Đăng nhập</h1>
+
+                        <div class="login__box">
+                            <div class="login__box-check">
+                                <div class="login__box-input">
+                                    <i class='bx bx-user login__icon'></i>
+                                    <input id="username" name="username" type="text" placeholder="Tên đăng nhập" class="login__input">
+                                </div>
+    
+                                <div class="login__box-input-icon-error none">
+                                    <span class="login__box-icon1 fas fa-exclamation"></span>
+                                </div>
+    
+                                <div class="login__box-input-icon-check none">
+                                    <span class="login__box-icon2 fas fa-check"></span>
+                                </div>
+                            </div>
+
+                            <span class="form-message none"></span>
+                        </div>
+
+                        <div class="login__box">
+                            <div class="login__box-check">
+                                <div class="login__box-input">
+                                    <i class='bx bx-lock login__icon'></i>
+                                    <input id="password" name="password" type="password" placeholder="Mật khẩu" class="login__input">
+                                </div>
+
+                                <div class="login__box-input-icon-hide">
+                                    <i class="login__box-icon-hide-pass fas fa-eye"></i>
+                                </div>
+    
+                                <div class="login__box-input-icon-error none">
+                                    <span class="login__box-icon1 fas fa-exclamation"></span>
+                                </div>
+    
+                                <div class="login__box-input-icon-check none">
+                                    <span class="login__box-icon2 fas fa-check"></span>
+                                </div>
+                            </div>
+
+                            <span class="form-message none"></span>
+                        </div>
+
+                        <span class="login__forgot" id="forgot-password">Quên mật khẩu</span>
+
+                        <button class="login__button">Đăng nhập</button>
+
+                        <div>
+                            <span class="login__account">Bạn chưa có tài khoản?</span>
+                            <span class="login__signin" id="sign-up">Đăng ký</span>
+                        </div>
+                    </form>
+
+                    <form action="" method="POST" class="login__create none" id="login-up">
+                        <h1 class="login__title">Đăng ký</h1>
+
+                        <div class="login__box">
+                            <div class="login__box-check">
+                                <div class="login__box-input">
+                                    <i class='bx bx-user login__icon'></i>
+                                    <input id="create-username" name="create-username" type="text" placeholder="Tên đăng nhập" class="login__input">
+                                </div>
+    
+                                <div class="login__box-input-icon-error none">
+                                    <span class="login__box-icon1 fas fa-exclamation"></span>
+                                </div>
+    
+                                <div class="login__box-input-icon-check none">
+                                    <span class="login__box-icon2 fas fa-check"></span>
+                                </div>
+                            </div>
+
+                            <span class="form-message none"></span>
+                        </div>
+
+                        <div class="login__box">
+                            <div class="login__box-check">
+                                <div class="login__box-input">
+                                    <i class='bx bx-at login__icon'></i>
+                                    <input id="email" name="email" type="text" placeholder="Email" class="login__input">
+                                </div>
+    
+                                <div class="login__box-input-icon-error none">
+                                    <span class="login__box-icon1 fas fa-exclamation"></span>
+                                </div>
+    
+                                <div class="login__box-input-icon-check none">
+                                    <span class="login__box-icon2 fas fa-check"></span>
+                                </div>
+                            </div>
+
+                            <span class="form-message none"></span>
+                        </div>
+
+                        <div class="login__box">
+                            <div class="login__box-check">
+                                <div class="login__box-input">
+                                    <i class='bx bx-lock login__icon'></i>
+                                    <input id="create-password" name="create-password" type="password" placeholder="Mật khẩu" class="login__input login__input-password-correct login__input-password">
+                                </div>
+
+                                <div class="login__box-input-icon-hide">
+                                    <i class="login__box-icon-show-pass fas fa-eye"></i>
+                                </div>
+    
+                                <div class="login__box-input-icon-error none">
+                                    <span class="login__box-icon1 fas fa-exclamation"></span>
+                                </div>
+    
+                                <div class="login__box-input-icon-check none">
+                                    <span class="login__box-icon2 fas fa-check"></span>
+                                </div>
+                            </div>
+
+                            <div class="login__box-indicator">
+                                <span class="login__box-weak"></span>
+                                <span class="login__box-medium"></span>
+                                <span class="login__box-strong"></span>
+                            </div>
+
+                            <div class="login__box-indicator-text"></div>
+
+                            <span class="form-message none"></span>
+                        </div>
+
+                        <div class="login__box">
+                            <div class="login__box-check">
+                                <div class="login__box-input">
+                                    <i class='bx bx-lock login__icon'></i>
+                                    <input id="check-password" name="check-password" type="password" placeholder="Nhập lại mật khẩu" class="login__input login__input-password-again">
+                                </div>
+
+                                <div class="login__box-input-icon-hide">
+                                    <i class="login__box-icon-check-pass-again fas fa-eye"></i>
+                                </div>
+    
+                                <div class="login__box-input-icon-error none">
+                                    <span class="login__box-icon1 fas fa-exclamation"></span>
+                                </div>
+    
+                                <div class="login__box-input-icon-check none">
+                                    <span class="login__box-icon2 fas fa-check"></span>
+                                </div>
+                            </div>
+
+                            <span class="form-message none"></span>
+                        </div>
+
+                        <button class="login__button">Đăng ký</button>
+
+                        <div>
+                            <span class="login__account">Bạn đã có tài khoản?</span>
+                            <span class="login__signup" id="sign-in">Đăng nhập</span>
+                        </div>
+
+                        <div class="login__social">
+                            <a href="" class="login__social-link">
+                                <i class="fab fa-facebook-f login__social-icon"></i>
+                            </a>
+
+                            <a href="" class="login__social-link">
+                                <i class="fab fa-twitter login__social-icon"></i>
+                            </a>
+
+                            <a href="" class="login__social-link">
+                                <i class="fab fa-google login__social-icon"></i>
+                            </a>
+                        </div>
+                    </form>
+
+                    <form action="" method="POST" class="login__forgot-password none" id="form-forgot-password">
+                        <h1 class="login__title">Tìm tài khoản của bạn</h1>
+
+                        <p class="login__title-content">Vui lòng nhập địa chỉ email của bạn để tìm kiếm tài khoản của bạn.</p>
+
+                        <div class="login__box">
+                            <div class="login__box-validate">
+                                <div class="login__box-input">
+                                    <i class='bx bx-user login__icon'></i>
+                                    <input id="checkEmail" name="checkEmail" type="text" placeholder="Email của bạn" class="login__input">
+                                </div>
+    
+                                <div class="login__box-icon-error none">
+                                    <span class="login__box-icon1 fas fa-exclamation"></span>
+                                </div>
+
+                                <div class="login__box-icon-check none">
+                                    <span class="login__box-icon2 fas fa-check"></span>
+                                </div>
+                            </div>
+
+                            <span class="form-message none"></span>
+                        </div>
+
+                        <div class="forgot__password-button">
+                            <a href="" class="forgot__password-link">Search</a>
+                            <button class="forgot__password-btn" id="forgot-password-button">Cancel</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+            <!--<footer class="footer">
+                <div class="footer__bottom hide-on-mobile">
+                    <div class="grid wide">
+                        <p class="footer__copyright">© 2020 Existing Hồ Lê website. All Rights Reserved | Design by Khoa Hồ</p>
+                    </div>
+                </div>
+
+                <!--<div class="footer__mobile-bottom">
+                    <div class="grid wide">
+                        <p class="footer__mobile-copyright">© 2020 Existing Hồ Lê website. All Rights Reserved | Design by Khoa Hồ</p>
+                    </div>
+                </div>-->
+            <!--</footer>-->
+        </div>
+
+        <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+        <script src="./assets-index/JavaScript/loginForm.js"></script>
+        <script src="./assets-index/JavaScript/validator.js"></script>
+        <script src="./assets-index/JavaScript/sweetalert.min.js"></script>
+        <script>
+            Validator({
+                form: '#login-in',
+                formGroupSelector: '.login__box',
+                errorSelector: '.form-message',
+                errorIcon: '.login__box-input-icon-error',
+                errorFormMessage: '.form-message',
+                showHidePassword: '.login__box-input-icon-hide',
+                rules: [
+                    Validator.isRequired('#username', 'Vui lòng nhập tên đăng nhập'),
+                    Validator.minLength('#password', 8),
+                    Validator.isRequired('input[name = "remember"]'),
+                ],
+                onSubmit: function (data){
+                    // Call API
+                    console.log(data);
+                }
+            })
+
+            Validator({
+                form: '#login-up',
+                formGroupSelector: '.login__box',
+                errorSelector: '.form-message',
+                errorIcon: '.login__box-input-icon-error',
+                errorFormMessage: '.form-message',
+                showHidePassword: '.login__box-input-icon-hide',
+                inputPassword: '.login__input-password',
+                indicatorPassword: '.login__box-indicator',
+                indicatorWeakPassword: '.login__box-weak',
+                indicatorMediumPassword: '.login__box-medium',
+                indicatorStrongPassword: '.login__box-strong',
+                indicatorTextPassword: '.login__box-indicator-text',
+                showHidePassword: '.login__box-input-icon-hide',
+                rules: [
+                    Validator.isRequired('#create-username', 'Vui lòng nhập tên đăng nhập'),
+                    Validator.isRequired('#email', 'Vui lòng nhập email'),
+                    Validator.isEmail('#email', 'Email không hợp lệ'),
+                    Validator.isRequired('#create-password', 'Vui lòng nhập tối thiểu 8 kí tự'),
+                    //Validator.minLength('#create-password', 8),
+                    Validator.isConfirmed('#check-password', function(){
+                        return document.querySelector('#login-up #create-password').value;
+                    }, 'Mật khẩu nhập lại không chính xác'),
+                    Validator.isRequired('input[name = "remember"]'),
+                ],
+                onSubmit: function (data){
+                    // Call API
+                    console.log(data);
+                }
+            })
+
+            Validator({
+                form: '#form-forgot-password',
+                formGroupSelector: '.login__box',
+                errorSelector: '.form-message',
+                errorIcon: '.login__box-icon-error',
+                errorFormMessage: '.form-message',
+                rules: [
+                    Validator.isRequired('#checkEmail', 'Vui lòng nhập email'),
+                    Validator.isEmail('#checkEmail', 'Email không hợp lệ'),
+                ],
+                onSubmit: function (data){
+                    // Call API
+                    console.log(data);
+                }
+            })
+        </script>
+    </body>
+</html>

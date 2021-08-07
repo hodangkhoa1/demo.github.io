@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html id="main-html" data-theme="light">
+
+<head>
+    <!--Phần đầu-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA_Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="shortcut icon" type="image/png" sizes="200x138" href="./assets-index/img/Hồ Lê.svg">
+    <link rel="stylesheet" href="./assets-index/css/main.css">
+    <link rel="stylesheet" href="./assets-index/css/base.css">
+    <link rel="stylesheet" href="./assets-index/css/grid.css">
+    <link rel="stylesheet" href="./assets-index/css/responsive.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="./assets-index/css/lightslider.css">
+    <link rel="stylesheet" href="./assets-index/css/DarkMode.css">
+    <!--<link rel="stylesheet" href="./assets-index/css/introWeb.css">-->
+    <script src="https://kit.fontawesome.com/6fc4afcc5d.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="./assets-index/JavaScript/lightslider.js"></script>
+    <title>Phòng khám Hồ Lê</title>
+</head>
+
+
+<!--Phần thân-->
+
+<body>
+    <div class="page-loader"></div>
+
+    <div id="popup-box" class="popup-box">
+        <div class="popup__box">
+            <i class="fas fa-exclamation popup__box-icon"></i>
+            <h1 class="popup__box-header">Your account will be sign out!</h1>
+            <label class="popup__box-label">Are you sure to proceed?</label>
+            <div class="popup__box-btns">
+                <div id="btn-cancel" class="popup__box-btn">
+                    <a href="#" class="popup__box-button">Cancel Process</a>
+                </div>
+
+                <div id="btn-signOut" class="popup__box-btn">
+                    <a href="#" class="popup__box-button">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div id="progressbar"></div>-->
+
+    <div class="app display-hidden">
+        <header class="header">
+            <div class="grid wide">
+                <nav class="toolbar">
+                    <div class="nav__bar-logo hide-on-mobile-tablet">
+                        <a href="/" class="nav__bar-logo-link">
+                            <img src="./assets-index/img/Hồ Lê.svg" alt="" class="nav__bar-logo-img">
+                        </a>
+                    </div>
+
+                    <div class="nav__bar hide-on-mobile-tablet">
+                        <ul class="nav__bar-list hide-on-tablet">
+                            <li class="nav__bar-item">
+                                <a id="disable-link" aria-current="page" href="/" class="nav__bar-link">
+                                    <i class="nav__bar-icon fas fa-home"></i> TRANG CHỦ
+                                </a>
+                            </li>
+
+                            <li class="nav__bar-item">
+                                <a href="home.html" class="nav__bar-link">
+                                    <i class="nav__bar-icon fas fa-store-alt"></i> MUA HÀNG
+                                </a>
+                            </li>
+
+                            <li class="nav__bar-item">
+                                <a href="Schedule.html" class="nav__bar-link">
+                                    <i class="nav__bar-icon fas fa-calendar-alt"></i> ĐẶT LỊCH
+                                </a>
+                            </li>
+
+                            <li class="nav__bar-item">
+                                <a href="contact.html" class="nav__bar-link">
+                                    <i class="nav__bar-icon fas fa-headphones-alt"></i> LIÊN HỆ
+                                </a>
+                            </li>
+
+                            <li class="nav__bar-item">
+                                <a href="About.html" class="nav__bar-link">
+                                    <i class="nav__bar-icon fas fa-user"></i> ABOUT
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul id="navBar-control" class="nav__bar-control">
+                            <li class="nav__bar-btn">
+                                <a href="login.html" class="nav__bar-btn-link">Đăng nhập
+                                        <i class="fas fa-sign-in-alt nav__bar-btn-icon"></i>
+                                    </a>
+                            </li>
+                        </ul>
+
+                        <div id="user-action" class="user-action">
+                            <div class="user-action__profile" onclick="menuToggle()">
+                                <img src="./assets-index/img/CV1.jpg" alt="Avatar" class="user-action__profile-img">
+                            </div>
+
+                            <div class="user-action__menu">
+                                <h3 class="user-action__menu-heading">
+                                    Hồ Đăng Khoa
+                                    <span class="user-action__menu-heading-span">Tân Bình, TP.HCM</span>
+                                </h3>
+
+                                <ul class="user-action__menu-list">
+                                    <li class="user-action__menu-item">
+                                        <!--<img src="./assets-index/img/profileUser.png" class="user-action__menu-item-img">-->
+                                        <i class="far fa-user-circle user-action__menu-item-img"></i>
+                                        <a href="#" class="user-action__menu-item-link">My Profile</a>
+                                    </li>
+
+                                    <li class="user-action__menu-item">
+                                        <!--<img src="./assets-index/img/profileEdit.png" class="user-action__menu-item-img">-->
+                                        <i class="far fa-edit user-action__menu-item-img"></i>
+                                        <a href="#" class="user-action__menu-item-link">Edit Profile</a>
+                                    </li>
+
+                                    <li id="dark-interface" class="user-action__menu-item">
+                                        <!--<img src="./assets-index/img/profileDarkmode.png" class="user-action__menu-item-img">-->
+                                        <i class="fas fa-adjust user-action__menu-item-img"></i>
+                                        <a href="#" class="user-action__menu-item-link">
+                                            <label id="change-text" for="dark-checkbox" class="user-action__menu-item-label">Giao diện tối</label>
+                                        </a>
+
+                                        <input type="checkbox" hidden id="dark-checkbox" name="dark-theme">
+                                    </li>
+
+                                    <li class="user-action__menu-item">
+                                        <!--<img src="./assets-index/img/profileSettings.png" class="user-action__menu-item-img">-->
+                                        <i class="fas fa-cog user-action__menu-item-img"></i>
+                                        <a href="#" class="user-action__menu-item-link">Cài đặt</a>
+                                    </li>
+
+                                    <li class="user-action__menu-item">
+                                        <!--<img src="./assets-index/img/profileQuestion.png" class="user-action__menu-item-img">-->
+                                        <i class="far fa-question-circle user-action__menu-item-img"></i>
+                                        <a href="Helpcenter.html" class="user-action__menu-item-link">Trợ giúp</a>
+                                    </li>
+
+                                    <li id="log-out" class="user-action__menu-item">
+                                        <!--<img src="./assets-index/img/profileLogout.png" class="user-action__menu-item-img">-->
+                                        <i class="fas fa-sign-out-alt user-action__menu-item-img"></i>
+                                        <a href="#" class="user-action__menu-item-link">Đăng xuất</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!--Nav mobile-->
+                <div class="nav__bar-mobile">
+                    <div class="nav__bar-mobile-menu">
+                        <label for="mobile-menu-checkbox" class="nav__bar-mobile-menu-label">             
+                                <i class="nav__bar-mobile-menu-icon fas fa-bars"></i>
+                            </label>
+                    </div>
+
+                    <input type="checkbox" hidden id="mobile-menu-checkbox" class="nav__menu-mobile">
+
+                    <div class="nav__bar-mobile-logo hide-on-tablet">
+                        <a href="index.html" class="nav__bar-logo-mobile-link">
+                            <img src="./assets-index/img/Hồ Lê.svg" alt="" class="nav__bar-logo-mobile-img">
+                        </a>
+                    </div>
+
+                    <div class="nav__bar-mobile-user">
+                        <label for="mobile-user-checkbox" class="nav__bar-mobile-user-label">
+                                <i class="nav__bar-mobile-user-icon fas fa-user"></i>
+                            </label>
+                    </div>
+
+                    <input type="checkbox" hidden id="mobile-user-checkbox" class="nav__user-mobile">
+
+                    <div class="menu__mobile">
+                        <div class="menu__mobile-header">
+                            <h2 class="menu__mobile-header-heading">Danh mục</h2>
+                            <label for="mobile-menu-checkbox" class="menu__mobile-header-close">
+                                    <img src="./assets-index/img/close-black.svg" alt="" class="menu__mobile-header-close-icon">
+                                </label>
+                        </div>
+                        <ul class="menu__mobile-list">
+                            <li class="menu__mobile-item">
+                                <a href="home.html" class="menu__mobile-link">
+                                    <span class="menu__mobile-icon fas fa-store-alt"></span>
+                                    <span class="menu__mobile-name">Mua hàng</span>
+                                </a>
+                            </li>
+
+                            <li class="menu__mobile-item">
+                                <a href="Schedule.html" class="menu__mobile-link">
+                                    <span class="menu__mobile-icon fas fa-calendar-alt"></span>
+                                    <span class="menu__mobile-name">Đặt lịch</span>
+                                </a>
+                            </li>
+
+                            <li class="menu__mobile-item">
+                                <a href="contact.html" class="menu__mobile-link">
+                                    <span class="menu__mobile-icon fas fa-headphones-alt"></span>
+                                    <span class="menu__mobile-name">Liên hệ</span>
+                                </a>
+                            </li>
+
+                            <li class="menu__mobile-item">
+                                <a href="About.html" class="menu__mobile-link">
+                                    <span class="menu__mobile-icon fas fa-user"></span>
+                                    <span class="menu__mobile-name">About</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="user__mobile">
+                        <div class="user__mobile-header">
+                            <div class="user__mobile-header-logo">
+                                <img src="./assets-index/img/HL2.svg" alt="" class="user__mobile-header-img">
+                            </div>
+                            <label for="mobile-user-checkbox" class="user__mobile-header-close">
+                                    <!--<i class="user__mobile-header-icon fas fa-times"></i>-->
+                                    <img src="./assets-index/img/close-black.svg" alt="" class="user__mobile-header-icon">
+                                </label>
+                        </div>
+
+                        <ul class="user__mobile-list">
+                            <li class="user__mobile-item">
+                                <a href="login.html" class="user__mobile-link">
+                                    <span class="user__mobile-icon fas fa-sign-in-alt"></span>
+                                    <span class="user__mobile-name">Đăng nhập</span>
+                                </a>
+                            </li>
+
+                            <li class="user__mobile-item">
+                                <a href="login.html" class="user__mobile-link">
+                                    <span class="user__mobile-icon fas fa-user-plus"></span>
+                                    <span class="user__mobile-name">Đăng ký</span>
+                                </a>
+                            </li>
+
+                            <li class="user__mobile-item">
+                                <label for="mobile-user-checkbox" class="user__mobile-link user__mobile-link-cursor">
+                                        <span class="user__mobile-icon fas fa-home"></span>
+                                        <span class="user__mobile-name">Trang chủ</span>
+                                    </label>
+                            </li>
+
+                            <li class="user__mobile-item">
+                                <a href="#" class="user__mobile-link">
+                                    <span class="user__mobile-icon fas fa-adjust"></span>
+                                    <label id="change-text" for="dark-checkbox" class="user__mobile-name">Giao diện tối</label>
+                                    <input type="checkbox" hidden id="dark-checkbox" name="dark-theme">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="app__container">
+            <div class="header__intro-image">
+                <!--<img src="./assets-index/img/background.jpg" class="header__intro-image-img">-->
+                <div class="header__intro">
+                    <div class="header__intro-heading">
+                        <h1 class="header__intro-heading-label">NHÀ THUỐC HỒ LÊ</h1>
+                    </div>
+
+                    <div class="header__intro-content">
+                        <p class="header__intro-content-label">
+                            Chào mừng bạn đến với nhà thuốc Hồ Lê của chúng tôi. Nếu bạn muốn mua thuốc tốt <br>phải đến ngay nhà thuốc Hồ Lê của chúng tôi.
+                        </p>
+                    </div>
+
+                    <div class="header__intro-btn hide-on-mobile-tablet">
+                        <button id="headerButtonClick1" class="header__intro-btn-click" type="button">Mua hàng</button>
+                        <button id="headerButtonClick2" class="header__intro-btn-click" type="button">Tham gia ngay</button>
+                    </div>
+
+                    <div class="header__intro-btn-mobile">
+                        <button onclick="location.href='home.html'" class="header__intro-btn-click-mobile" type="button">Mua hàng</button>
+                        <button onclick="location.href='login.html'" class="header__intro-btn-click-mobile" type="button">Tham gia ngay</button>
+                    </div>
+                </div>
+
+                <a href="#body-container" class="scroll-down-box">
+                    <Span class="scroll-down__Arrow"></Span>
+                    <span class="scroll-down__Arrow"></span>
+                    <span class="scroll-down__Arrow"></span>
+                </a>
+            </div>
+
+            <div id="body-container" class="grid wide">
+                <div class="service__header hide-on-mobile">
+                    <h3 class="service__header-heading">
+                        <span class="service__header-content">DỊCH VỤ TẠI NHÀ THUỐC HỒ LÊ</span>
+                    </h3>
+                </div>
+
+                <div class="service__header-mobile hide-on-mobile-horizontal">
+                    <h3 class="service__header-heading-mobile">
+                        <span class="service__header-content-mobile">DỊCH VỤ TẠI NHÀ THUỐC HỒ LÊ</span>
+                    </h3>
+                </div>
+
+                <!--Service Card-->
+                <div class="service-container">
+                    <div class="service-card">
+                        <div class="service-card__image">
+                            <img src="./assets-index/img/calendarService.png" class="service-card__image-img">
+                        </div>
+
+                        <div class="service-card__content">
+                            <div class="service-card__content-text">
+                                <h3 class="service-card__content-heading">Đặt lịch</h3>
+                                <p class="service-card__content-paragraph">Bạn không còn mất thời gian chờ đợi đăng ký khám.</p>
+                                <a href="#" class="service-card__content-links">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-card__image">
+                            <img src="./assets-index/img/informationService.png" class="service-card__image-img">
+                        </div>
+
+                        <div class="service-card__content">
+                            <div class="service-card__content-text">
+                                <h3 class="service-card__content-heading">Tiếp đón</h3>
+                                <p class="service-card__content-paragraph">Nhân viên check thông tin bạn đã đăng ký và chỉ dẫn khám.</p>
+                                <a href="#" class="service-card__content-links">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-card__image">
+                            <img src="./assets-index/img/doctorService.png" class="service-card__image-img">
+                        </div>
+
+                        <div class="service-card__content">
+                            <div class="service-card__content-text">
+                                <h3 class="service-card__content-heading">Khám bệnh</h3>
+                                <p class="service-card__content-paragraph">Bạn sẽ được bác sỹ chuyên ngành thăm khám.</p>
+                                <a href="#" class="service-card__content-links">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-card__image">
+                            <img src="./assets-index/img/earnService.png" class="service-card__image-img">
+                        </div>
+
+                        <div class="service-card__content">
+                            <div class="service-card__content-text">
+                                <h3 class="service-card__content-heading">Bảng Giá</h3>
+                                <p class="service-card__content-paragraph">Bảng giá dịch vụ Phòng khám Hồ Lê. Thông tin được công khai, đảm bảo tính minh bạch.</p>
+                                <a href="#" class="service-card__content-links">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--News-->
+                <div class="news hide-on-mobile">
+                    <h3 class="news__heading">
+                        <span class="news__content">TIN TỨC</span>
+                    </h3>
+                </div>
+
+                <div class="news-mobile">
+                    <h3 class="news__heading-mobile">TIN TỨC MỚI</h3>
+                    <div class="news__border-mobile"></div>
+                </div>
+
+                <!--<div class="row">
+                        <!--<div class="col l-4 c-12">
+                            <div class="news-container">
+                                <div class="news__header">
+                                    <a href="" class="news__header-picture">
+                                        <img src="./assets-index/img/cough.jpg" alt="" class="news__header-img">
+                                    </a>
+                                </div>
+
+                                <div class="news__container">
+                                    <div class="news__container-header">
+                                        <a href="" class="news__container-link">
+                                            <h3 class="news__container-heading">Trẻ bị ho? Sai lầm trong điều trị nhiều phụ huynh mắc phải</h3>
+                                        </a>
+                                    </div>
+
+                                    <div class="news__container-body">
+                                        <div class="news__container-content">
+                                            <h3 class="news__container-title">Ho giúp làm sạch đường thở, tống xuất đàm, dịch tiết hoặc vật lạ lọt vào đường hô hấp của trẻ. Nếu thấy trẻ bị ho có kèm theo sốt, khó thở, tím...</h3>
+                                        </div>
+
+                                        <div class="news__container-date">
+                                            <p class="news__container-time">26/12/2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+
+                <!--<div class="col l-4 c-12">
+                            <div class="news-container">
+                                <div class="news__header">
+                                    <a href="" class="news__header-picture">
+                                        <img src="./assets-index/img/ScarletFever.jpg" alt="" class="news__header-img">
+                                    </a>
+                                </div>
+
+                                <div class="news__container">
+                                    <div class="news__container-header">
+                                        <a href="" class="news__container-link">
+                                            <h3 class="news__container-heading">Bệnh sốt phát ban là gì? Những dấu hiệu và triệu chứng của sốt phát ban</h3>
+                                        </a>
+                                    </div>
+
+                                    <div class="news__container-body">
+                                        <div class="news__container-content">
+                                            <h3 class="news__container-title">Bệnh sốt phát ban là một bệnh nhiễm trùng nhẹ thường xảy ra ở trẻ em độ tuổi lên 2. Các dấu hiệu và triệu chứng bệnh thường quá nhẹ và khó có thể dễ dàng nhận thấy...</h3>
+                                        </div>
+
+                                        <div class="news__container-date">
+                                            <p class="news__container-time">15/07/2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+
+                <!--<div class="col l-4 c-12">
+                            <div class="news-container">
+                                <div class="news__header">
+                                    <a href="" class="news__header-picture">
+                                        <img src="./assets-index/img/fever.jpg" alt="" class="news__header-img">
+                                    </a>
+                                </div>
+
+                                <div class="news__container">
+                                    <div class="news__container-header">
+                                        <a href="" class="news__container-link">
+                                            <h3 class="news__container-heading">Trẻ bị sốt? Sai lầm trong khi chăm sóc nhiều phụ huynh mắc phải</h3>
+                                        </a>
+                                    </div>
+
+                                    <div class="news__container-body">
+                                        <div class="news__container-content">
+                                            <h3 class="news__container-title">Sốt là một triệu chứng thường gặp ở trẻ em. Khi bị sốt, nhiệt độ cơ thể bé tăng lên trên 38 độ C. Triệu chứng khi trẻ bị sốt: cảm thấy mệt mỏi, bé trở nên biếng ăn...</h3>
+                                        </div>
+
+                                        <div class="news__container-date">
+                                            <p class="news__container-time">01/10/2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+
+                <!--<ul id="autoWidth" class="cs-hidden">
+                            <li class="item-a">
+                                <div class="box-news">
+                                    <div class="slide-news__image">
+                                        <img src="./assets-index/img/cough.jpg" class="slide-news__image-img">
+                                    </div>
+
+                                    <div class="detail-box-new">
+                                        <div class="detail-new__header">
+                                            <a href="" class="detail-new__header-link">
+                                                <h3 class="detail-new__header-heading">Trẻ bị sốt? Sai lầm trong khi chăm sóc nhiều phụ huynh mắc phải</h3>
+                                            </a>
+                                        </div>
+
+                                        <div class="detail-new__content">
+                                            <h3 class="detail-new__content-title">Sốt là một triệu chứng thường gặp ở trẻ em. Khi bị sốt, nhiệt độ cơ thể bé tăng lên trên 38 độ C. Triệu chứng khi trẻ bị sốt: cảm thấy mệt mỏi, bé trở nên biếng ăn...</h3>
+                                        </div>
+
+                                        <div class="detail-new__date">
+                                            <p class="detail-new__date-time">01/10/2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="item-b">
+                                <div class="box-news">
+                                    <div class="slide-news__image">
+                                        <img src="./assets-index/img/ScarletFever.jpg" class="slide-news__image-img">
+                                    </div>
+
+                                    <div class="detail-box-new">
+                                        <div class="detail-new__header">
+                                            <a href="" class="detail-new__header-link">
+                                                <h3 class="detail-new__header-heading">Bệnh sốt phát ban là gì? Những dấu hiệu và triệu chứng của sốt phát ban</h3>
+                                            </a>
+                                        </div>
+
+                                        <div class="detail-new__content">
+                                            <h3 class="detail-new__content-title">Bệnh sốt phát ban là một bệnh nhiễm trùng nhẹ thường xảy ra ở trẻ em độ tuổi lên 2. Các dấu hiệu và triệu chứng bệnh thường quá nhẹ và khó có thể dễ dàng nhận thấy...</h3>
+                                        </div>
+
+                                        <div class="detail-new__date">
+                                            <p class="detail-new__date-time">15/07/2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="item-c">
+                                <div class="box-news">
+                                    <div class="slide-news__image">
+                                        <img src="./assets-index/img/cough.jpg" class="slide-news__image-img">
+                                    </div>
+
+                                    <div class="detail-box-new">
+                                        <div class="detail-new__header">
+                                            <a href="" class="detail-new__header-link">
+                                                <h3 class="detail-new__header-heading">Trẻ bị sốt? Sai lầm trong khi chăm sóc nhiều phụ huynh mắc phải</h3>
+                                            </a>
+                                        </div>
+
+                                        <div class="detail-new__content">
+                                            <h3 class="detail-new__content-title">Sốt là một triệu chứng thường gặp ở trẻ em. Khi bị sốt, nhiệt độ cơ thể bé tăng lên trên 38 độ C. Triệu chứng khi trẻ bị sốt: cảm thấy mệt mỏi, bé trở nên biếng ăn...</h3>
+                                        </div>
+
+                                        <div class="detail-new__date">
+                                            <p class="detail-new__date-time">01/10/2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="item-d">
+                                <div class="box-news">
+                                    <div class="slide-news__image">
+                                        <img src="./assets-index/img/cough.jpg" class="slide-news__image-img">
+                                    </div>
+
+                                    <div class="detail-box-new">
+                                        <div class="detail-new__header">
+                                            <a href="" class="detail-new__header-link">
+                                                <h3 class="detail-new__header-heading">Trẻ bị sốt? Sai lầm trong khi chăm sóc nhiều phụ huynh mắc phải</h3>
+                                            </a>
+                                        </div>
+
+                                        <div class="detail-new__content">
+                                            <h3 class="detail-new__content-title">Sốt là một triệu chứng thường gặp ở trẻ em. Khi bị sốt, nhiệt độ cơ thể bé tăng lên trên 38 độ C. Triệu chứng khi trẻ bị sốt: cảm thấy mệt mỏi, bé trở nên biếng ăn...</h3>
+                                        </div>
+
+                                        <div class="detail-new__date">
+                                            <p class="detail-new__date-time">01/10/2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="item-e">
+                                <div class="box-news">
+                                    <div class="slide-news__image">
+                                        <img src="./assets-index/img/Amidan.jpg" class="slide-news__image-img">
+                                    </div>
+
+                                    <div class="detail-box-new">
+                                        <div class="detail-new__header">
+                                            <a href="" class="detail-new__header-link">
+                                                <h3 class="detail-new__header-heading">Viêm Amidan là gì? Nguyên nhân, triệu chứng và cách chữa trị</h3>
+                                            </a>
+                                        </div>
+
+                                        <div class="detail-new__content">
+                                            <h3 class="detail-new__content-title">Viêm amidan là bệnh thường gặp trong các bệnh lý tai-mũi-họng ở trẻ em. Dấu hiệu nhận biết: Khô họng, hơi thở có mùi. Bệnh nhân bị các triệu chứng sưng, nóng...</h3>
+                                        </div>
+
+                                        <div class="detail-new__date">
+                                            <p class="detail-new__date-time">10/01/2021</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>-->
+                <!--</div>-->
+
+                <ul id="autoWidth" class="cs-hidden">
+                    <li class="item-a">
+                        <div class="box-news">
+                            <div class="slide-news__image">
+                                <img src="./assets-index/img/cough.jpg" class="slide-news__image-img">
+                            </div>
+
+                            <div class="detail-box-new">
+                                <div class="detail-new__header">
+                                    <a href="" class="detail-new__header-link">
+                                        <h3 class="detail-new__header-heading">Trẻ bị sốt? Sai lầm trong khi chăm sóc nhiều phụ huynh mắc phải</h3>
+                                    </a>
+                                </div>
+
+                                <div class="detail-new__content">
+                                    <h3 class="detail-new__content-title">Sốt là một triệu chứng thường gặp ở trẻ em. Khi bị sốt, nhiệt độ cơ thể bé tăng lên trên 38 độ C. Triệu chứng khi trẻ bị sốt: cảm thấy mệt mỏi, bé trở nên biếng ăn...</h3>
+                                </div>
+
+                                <div class="detail-new__date">
+                                    <p class="detail-new__date-time">01/10/2020</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="item-b">
+                        <div class="box-news">
+                            <div class="slide-news__image">
+                                <img src="./assets-index/img/ScarletFever.jpg" class="slide-news__image-img">
+                            </div>
+
+                            <div class="detail-box-new">
+                                <div class="detail-new__header">
+                                    <a href="" class="detail-new__header-link">
+                                        <h3 class="detail-new__header-heading">Bệnh sốt phát ban là gì? Những dấu hiệu và triệu chứng của sốt phát ban</h3>
+                                    </a>
+                                </div>
+
+                                <div class="detail-new__content">
+                                    <h3 class="detail-new__content-title">Bệnh sốt phát ban là một bệnh nhiễm trùng nhẹ thường xảy ra ở trẻ em độ tuổi lên 2. Các dấu hiệu và triệu chứng bệnh thường quá nhẹ và khó có thể dễ dàng nhận thấy...</h3>
+                                </div>
+
+                                <div class="detail-new__date">
+                                    <p class="detail-new__date-time">15/07/2020</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="item-c">
+                        <div class="box-news">
+                            <div class="slide-news__image">
+                                <img src="./assets-index/img/cough.jpg" class="slide-news__image-img">
+                            </div>
+
+                            <div class="detail-box-new">
+                                <div class="detail-new__header">
+                                    <a href="" class="detail-new__header-link">
+                                        <h3 class="detail-new__header-heading">Trẻ bị sốt? Sai lầm trong khi chăm sóc nhiều phụ huynh mắc phải</h3>
+                                    </a>
+                                </div>
+
+                                <div class="detail-new__content">
+                                    <h3 class="detail-new__content-title">Sốt là một triệu chứng thường gặp ở trẻ em. Khi bị sốt, nhiệt độ cơ thể bé tăng lên trên 38 độ C. Triệu chứng khi trẻ bị sốt: cảm thấy mệt mỏi, bé trở nên biếng ăn...</h3>
+                                </div>
+
+                                <div class="detail-new__date">
+                                    <p class="detail-new__date-time">01/10/2020</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="item-d">
+                        <div class="box-news">
+                            <div class="slide-news__image">
+                                <img src="./assets-index/img/cough.jpg" class="slide-news__image-img">
+                            </div>
+
+                            <div class="detail-box-new">
+                                <div class="detail-new__header">
+                                    <a href="" class="detail-new__header-link">
+                                        <h3 class="detail-new__header-heading">Trẻ bị sốt? Sai lầm trong khi chăm sóc nhiều phụ huynh mắc phải</h3>
+                                    </a>
+                                </div>
+
+                                <div class="detail-new__content">
+                                    <h3 class="detail-new__content-title">Sốt là một triệu chứng thường gặp ở trẻ em. Khi bị sốt, nhiệt độ cơ thể bé tăng lên trên 38 độ C. Triệu chứng khi trẻ bị sốt: cảm thấy mệt mỏi, bé trở nên biếng ăn...</h3>
+                                </div>
+
+                                <div class="detail-new__date">
+                                    <p class="detail-new__date-time">01/10/2020</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="item-e">
+                        <div class="box-news">
+                            <div class="slide-news__image">
+                                <img src="./assets-index/img/Amidan.jpg" class="slide-news__image-img">
+                            </div>
+
+                            <div class="detail-box-new">
+                                <div class="detail-new__header">
+                                    <a href="" class="detail-new__header-link">
+                                        <h3 class="detail-new__header-heading">Viêm Amidan là gì? Nguyên nhân, triệu chứng và cách chữa trị</h3>
+                                    </a>
+                                </div>
+
+                                <div class="detail-new__content">
+                                    <h3 class="detail-new__content-title">Viêm amidan là bệnh thường gặp trong các bệnh lý tai-mũi-họng ở trẻ em. Dấu hiệu nhận biết: Khô họng, hơi thở có mùi. Bệnh nhân bị các triệu chứng sưng, nóng...</h3>
+                                </div>
+
+                                <div class="detail-new__date">
+                                    <p class="detail-new__date-time">10/01/2021</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Đánh giá của khách hàng -->
+                <div class="rating hide-on-mobile">
+                    <h3 class="rating__heading">
+                        <span class="rating__content">ĐÁNH GIÁ</span>
+                    </h3>
+                </div>
+
+                <div class="rating-mobile">
+                    <h3 class="rating__heading-mobile">ĐÁNH GIÁ</h3>
+                    <div class="rating__border-mobile"></div>
+                </div>
+
+                <div class="rating-reviews">
+                    <div class="rating__review">
+                        <div class="rating__review-head">
+                            <img src="./assets-index/img/HoangMinh.jpg" class="rating__review-head-img" width="250px">
+                        </div>
+
+                        <div class="rating__review-body">
+                            <div class="rating__review-body-name">Nguyễn Cao Hoàng Minh</div>
+                            <div class="rating__review-body-place">TP.Hồ Chí Minh</div>
+                            <div class="rating__review-body-rating">
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                            </div>
+                            <div class="rating__review-body-description">Tôi rất tin tưởng khi mua thuốc ở Nhà thuốc Hồ Lê vì đúng với loại thuốc được bác sĩ kê trong toa mà không cần phải chạy đến nhà thuốc bên ngoài. Hơn nữa, nếu uống thuốc đúng mà xảy ra các tác dụng phụ ngoài mong đợi, tôi vẫn
+                                có thể gọi dược sĩ để họ tư vấn thêm.</div>
+                        </div>
+                    </div>
+
+                    <div class="rating__review">
+                        <div class="rating__review-head">
+                            <img src="./assets-index/img/DoanHaiLong.jpg" class="rating__review-head-img" width="250px">
+                        </div>
+
+                        <div class="rating__review-body">
+                            <div class="rating__review-body-name">Đoàn Hải Long</div>
+                            <div class="rating__review-body-place">TP.Hồ Chí Minh</div>
+                            <div class="rating__review-body-rating">
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                            </div>
+                            <div class="rating__review-body-description">Mua thuốc ở Nhà thuốc Hồ Lê giúp tôi yên tâm hơn vì được bác sĩ tư vấn tận tình. Nhà thuốc đóng gói rất cẩn thận, trên hóa đơn có đính kèm hướng dẫn sử dụng cho từng loại thuốc. Điều này tôi chưa từng thấy khi mua thuốc ở các
+                                nhà thuốc bên ngoài.</div>
+                        </div>
+                    </div>
+
+                    <div class="rating__review">
+                        <div class="rating__review-head">
+                            <img src="./assets-index/img/DucAnh.jpg" class="rating__review-head-img" width="250px">
+                        </div>
+
+                        <div class="rating__review-body">
+                            <div class="rating__review-body-name">Đức Anh</div>
+                            <div class="rating__review-body-place">TP.Hồ Chí Minh</div>
+                            <div class="rating__review-body-rating">
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                            </div>
+                            <div class="rating__review-body-description">Mình rất vui khi biết được Nhà thuốc Hồ Lê. Dịch vụ nhanh chóng, tiện lợi mà còn có giấy chứng nhận từ Bộ Y tế nên mình rất an tâm.</div>
+                        </div>
+                    </div>
+
+                    <div class="rating__review">
+                        <div class="rating__review-head">
+                            <img src="./assets-index/img/CoHai.jpg" class="rating__review-head-img" width="250px">
+                        </div>
+
+                        <div class="rating__review-body">
+                            <div class="rating__review-body-name">Hồ Thanh Mỹ Phương</div>
+                            <div class="rating__review-body-place">TP.Hồ Chí Minh</div>
+                            <div class="rating__review-body-rating">
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                            </div>
+                            <div class="rating__review-body-description">Mình rất vui khi biết được Nhà thuốc Hồ Lê. Dịch vụ nhanh chóng, tiện lợi mà còn có giấy chứng nhận từ Bộ Y tế nên mình rất an tâm.</div>
+                        </div>
+                    </div>
+
+                    <div class="rating__review">
+                        <div class="rating__review-head">
+                            <img src="./assets-index/img/ChiNhung.jpg" class="rating__review-head-img" width="250px">
+                        </div>
+
+                        <div class="rating__review-body">
+                            <div class="rating__review-body-name">Nguyễn Cao Hoàng Minh</div>
+                            <div class="rating__review-body-place">TP.Hồ Chí Minh</div>
+                            <div class="rating__review-body-rating">
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                                <i class="fas fa-star rating__review-body-rating-icon"></i>
+                            </div>
+                            <div class="rating__review-body-description">Tôi rất tin tưởng khi mua thuốc ở Nhà thuốc Hồ Lê vì đúng với loại thuốc được bác sĩ kê trong toa mà không cần phải chạy đến nhà thuốc bên ngoài. Hơn nữa, nếu uống thuốc đúng mà xảy ra các tác dụng phụ ngoài mong đợi, tôi vẫn
+                                có thể gọi dược sĩ để họ tư vấn thêm.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-up-page"></div>
+        </div>
+
+        <!-- Chat Box -->
+        <div class="chat-box">
+            <input type="checkbox" id="icon-click" class="chat-box__click" hidden>
+            <div class="chat-box__control">
+                <label for="icon-click" class="chat-box__label">
+                        <i class="chat-box__icon-messenger fab fa-facebook-messenger"></i>
+                        <i class="chat-box__icon-times fas fa-times"></i>
+                    </label>
+            </div>
+
+            <div class="wrapper">
+                <div class="wrapper__header-text">Trực tuyến</div>
+                <div class="wrapper__chat-box">
+                    <div class="chat__desc-text">Bạn vui lòng điền vào biểu mẫu dưới đây để nói chuyện với nhân viên đang trực tiếp.</div>
+                    <form action="#" class="chat__action" id="chat-form" method="POST">
+                        <div class="chat__action-field">
+                            <input id="fullname" name="fullname" class="chat__action-input" type="text" placeholder="Tên của bạn">
+                            <span class="form-message"></span>
+                        </div>
+
+                        <div class="chat__action-field">
+                            <input id="email" name="email" class="chat__action-input" type="email" placeholder="Email của bạn">
+                            <span class="form-message"></span>
+                        </div>
+
+                        <div class="chat__action-field chat__action-field-textarea">
+                            <textarea id="text-content" name="text-content" class="chat__action-textarea" cols="30" rows="10" placeholder="Nội dung..."></textarea>
+                            <span class="form-message"></span>
+                        </div>
+
+                        <button class="chat__action-btn">Start chat</button>
+                    </form>
+                </div>
+
+                <!--<div class="wrapper__chat-box">
+                        <form action="#" class="chat__action" id="chat-form" method="POST">
+                            <div class="chat__action-field">
+                                <input id="fullname" name="fullname" class="chat__action-input" type="text" placeholder="Tên của bạn">
+                                <span class="form-message"></span>
+                            </div>
+
+                            <div class="chat__action-field">
+                                <input id="email" name="email" class="chat__action-input" type="email" placeholder="Email của bạn">
+                                <span class="form-message"></span>
+                            </div>
+
+                            <div class="chat__action-field chat__action-field-textarea">
+                                <textarea id="text-content" name="text-content" class="chat__action-textarea" cols="30" rows="10" placeholder="Nội dung..."></textarea>
+                                <span class="form-message"></span>
+                            </div>
+
+                            <button class="chat__action-btn">Start chat</button>
+                        </form>
+                    </div>-->
+            </div>
+        </div>
+
+        <div class="wrapper-notification">
+            <div class="toast">
+                <div class="content">
+                    <div class="icon"><i class="uil uil-wifi"></i></div>
+                    <div class="details">
+                        <span class="details-heading">You're online now</span>
+                        <p class="details-content">Hurray! Internet is connected.</p>
+                    </div>
+                </div>
+
+                <div class="close-icon"><i class="uil uil-times"></i></div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="grid wide footer__mobile-content">
+                <div class="row">
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="Helpcenter.html" class="footer-item__link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Tư vấn khách hàng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Phòng khám Hồ Lê</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="IntroductionHL.html" class="footer-item__link">Giới thiệu Hồ Lê</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="Comingsoon.html" class="footer-item__link">Tuyển dụng nhân viên</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Điều khoản Phòng khám</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Danh mục</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="home.html" class="footer-item__link">Mua hàng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="Schedule.html" class="footer-item__link">Đặt lịch khám</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="contact.html" class="footer-item__link">Liên hệ phòng khám</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Theo dõi chúng tôi trên</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-facebook"></i> Facebook
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-instagram"></i> Instagram
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-linkedin"></i> LinkedIn
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col l-2-4 m-8 c-12">
+                        <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
+                        <div class="footer__download">
+                            <img src="./assets-index/img/QR.png" alt="QR Download" class="footer__download-qr">
+                            <div class="footer__download-apps">
+                                <a href="" class="footer__download-app-link">
+                                    <img src="./assets-index/img/Appstore.png" alt="App Store" class="footer__download-app-img">
+                                </a>
+                                <a href="" class="footer__download-app-link">
+                                    <img src="./assets-index/img/google-play.png" alt="Google Play" class="footer__download-app-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="grid wide">
+                    <p class="footer__copyright">© 2020 Existing Hồ Lê website. All Rights Reserved | Design by Khoa Hồ</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./assets-index/JavaScript/validator.js"></script>
+    <!--<script src="./assets-index/JavaScript/introWeb.js"></script>-->
+    <script src="./assets-index/JavaScript/index.js"></script>
+    <script src="./assets-index/JavaScript/MainFile.js"></script>
+    <script src="./assets-index/JavaScript/anime.min.js"></script>
+    <script>
+        Validator({
+            form: '#chat-form',
+            formGroupSelector: '.chat__action-field',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ'),
+                Validator.isRequired('#email', 'Vui lòng nhập email của bạn'),
+                Validator.isRequired('#text-content', 'Vui lòng nhập nội dung'),
+            ],
+            onSubmit: function(data) {
+                // Call API
+                console.log(data);
+            }
+        });
+
+        // Slide News
+        $(document).ready(function() {
+            $('#autoWidth').lightSlider({
+                autoWidth: true,
+                loop: true,
+                auto: true,
+                pauseOnHover: true,
+                onSliderLoad: function() {
+                    $('#autoWidth').removeClass('cS-hidden');
+                }
+            });
+        });
+
+        // Progress Bar
+        /*$(window).scroll(function(){
+            var scrollBar = $(window).scrollTop(),
+            dh = $(document).height(),
+            wh = $(window).height();
+            scrollPercent = (scrollBar / (dh - wh)) * 100;
+            $('#progressbar').css('height', scrollPercent + '%');
+        })*/
+
+        const headerIntro = document.querySelector('.header__intro-heading-label');
+        const headerContent = document.querySelector('.header__intro-content-label');
+        headerIntro.innerHTML = headerIntro.textContent.replace(/\S/g, "<span>$&</span>");
+        headerContent.innerHTML = headerContent.textContent.replace(/\S/g, "<span>$&</span>");
+
+        const contentAnimation = anime.timeline({
+            targets: '.header__intro-content-label span',
+            easing: "easeInOutExpo",
+            loop: true,
+        })
+
+        contentAnimation
+            .add({
+                rotate: function() {
+                    return anime.random(-360, 360);
+                },
+
+                translateX: function() {
+                    return anime.random(-500, 500);
+                },
+
+                translateY: function() {
+                    return anime.random(-500, 500);
+                },
+
+                duration: 5000,
+                delay: anime.stagger(20),
+            })
+
+        .add({
+            rotate: 0,
+            translateX: 0,
+            translateY: 0,
+            duration: 5000,
+            delay: anime.stagger(20),
+        })
+
+        anime.timeline({
+            loop: true
+        })
+
+        .add({
+            targets: '.header__intro-heading-label span',
+            translateY: [-600, 0], // [start value, end value]
+            scale: [10, 1], // [start value, end value]
+            opacity: [0, 1], // [start value, end value]
+            easing: "easeOutExpo",
+            duration: 1500, //1.5 seconds
+            delay: anime.stagger(100),
+        })
+
+        .add({
+            targets: '.header__intro-heading-label span',
+            translateX: [0, -1000], // [start value, end value]
+            scale: [1, 1], // [start value, end value]
+            opacity: [1, 0], // [start value, end value]
+            easing: "easeOutExpo",
+            duration: 2000, //1.5 seconds
+            delay: anime.stagger(100),
+        })
+
+        .add({
+            targets: '.header__intro-heading-label span',
+            translateX: [1000, 0], // [start value, end value]
+            scale: [1, 1], // [start value, end value]
+            opacity: [0, 1], // [start value, end value]
+            easing: "easeOutExpo",
+            duration: 2000, //1.5 seconds
+            delay: anime.stagger(100),
+        })
+
+        /*const headerStick = document.querySelector('.header');
+        const sectionOne = document.querySelector('.service__header');
+        const sectionOneOptions = {
+            rootMargin: "-200px 0px 0px 0px"
+        };
+
+        const sectionOneObserver = new IntersectionObserver(function(entries, sectionOneObserver){
+            entries.forEach(entry => {
+                if(!entry.isIntersecting){
+                    headerStick.classList.add('nav-scrolled');
+                }
+                else{
+                    headerStick.classList.remove('nav-scrolled');
+                }
+            });
+        }, sectionOneOptions);
+
+        sectionOneObserver.observe(sectionOne);*/
+
+        window.addEventListener("scroll", function() {
+            var headerStick = document.querySelector('.header');
+            headerStick.classList.toggle("sticky", window.scrollY > 400);
+        })
+    </script>
+</body>
+
+</html>

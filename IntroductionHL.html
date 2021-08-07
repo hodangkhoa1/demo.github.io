@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Phần đầu-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="200x138" href="./assets-index/img/Hồ Lê.svg">
+        <link rel="stylesheet" href="./assets-index/css/IntroductionHL.css">
+        <link rel="stylesheet" href="./assets-index/css/base.css">
+        <link rel="stylesheet" href="./assets-index/css/grid.css">
+        <link rel="stylesheet" href="./assets-index/css/responsive.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <script src="https://kit.fontawesome.com/6fc4afcc5d.js" crossorigin="anonymous"></script>
+        <title>Phòng khám Hồ Lê</title>
+    </head>
+
+    <body>
+        <div class="app">
+            <header class="header">
+                <div class="grid wide">
+                    <nav class="toolbar">
+                        <div class="nav__bar-logo hide-on-mobile-tablet">
+                            <a href="index.html" class="nav__bar-logo-link">
+                                <img src="./assets-index/img/Hồ Lê.svg" alt="" class="nav__bar-logo-img">
+                            </a>
+                        </div>
+
+                        <div class="nav__bar hide-on-mobile">
+                            <ul class="nav__bar-list hide-on-tablet">
+                                <li class="nav__bar-item">
+                                    <a href="index.html" class="nav__bar-link">
+                                        <i class="nav__bar-icon fas fa-home"></i>
+                                        TRANG CHỦ
+                                    </a>
+                                </li>
+
+                                <li class="nav__bar-item">
+                                    <a href="home.html" class="nav__bar-link">
+                                        <i class="nav__bar-icon fas fa-store-alt"></i>
+                                        MUA HÀNG
+                                    </a>
+                                </li>
+    
+                                <li class="nav__bar-item">
+                                    <a href="Schedule.html" class="nav__bar-link">
+                                        <i class="nav__bar-icon fas fa-calendar-alt"></i>
+                                        ĐẶT LỊCH
+                                    </a>
+                                </li>
+    
+                                <li class="nav__bar-item">
+                                    <a href="contact.html" class="nav__bar-link">
+                                        <i class="nav__bar-icon fas fa-headphones-alt"></i>
+                                        LIÊN HỆ
+                                    </a>
+                                </li>
+    
+                                <li class="nav__bar-item">
+                                    <a href="About.html" class="nav__bar-link">
+                                        <i class="nav__bar-icon fas fa-user"></i>
+                                        ABOUT
+                                    </a>
+                                </li>
+                            </ul>
+    
+                            <ul class="nav__bar-control">
+                                <!--<li class="nav__bar-btn separate">
+                                    <a href="Registration.html" class="nav__bar-btn-link">Đăng ký</a>
+                                </li>-->
+        
+                                <li class="nav__bar-btn">
+                                    <a href="login.html" class="nav__bar-btn-link">Đăng nhập
+                                        <i class="fas fa-sign-in-alt nav__bar-btn-icon"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    
+                    <!--Nav mobile-->
+                    <div class="nav__bar-mobile">
+                        <div class="nav__bar-mobile-menu">
+                            <label for="mobile-menu-checkbox" class="nav__bar-mobile-menu-label">             
+                                <i class="nav__bar-mobile-menu-icon fas fa-bars"></i>
+                            </label>
+                        </div>
+
+                        <input type="checkbox" hidden id="mobile-menu-checkbox" class="nav__menu-mobile">
+
+                        <div class="nav__bar-mobile-logo hide-on-tablet">
+                            <a href="index.html" class="nav__bar-logo-mobile-link">
+                                <img src="./assets-index/img/Hồ Lê.svg" alt="" class="nav__bar-logo-mobile-img">
+                            </a>
+                        </div>
+
+                        <div class="nav__bar-mobile-user">
+                            <label for="mobile-user-checkbox" class="nav__bar-mobile-user-label">
+                                <i class="nav__bar-mobile-user-icon fas fa-user"></i>
+                            </label>
+                        </div>
+
+                        <input type="checkbox" hidden id="mobile-user-checkbox" class="nav__user-mobile">
+
+                        <div class="menu__mobile">
+                            <div class="menu__mobile-header">
+                                <h2 class="menu__mobile-header-heading">Danh mục</h2>
+                                <label for="mobile-menu-checkbox" class="menu__mobile-header-close">
+                                    <img src="./assets-index/img/close-black.svg" alt="" class="menu__mobile-header-close-icon">
+                                </label>
+                            </div>
+                            <ul class="menu__mobile-list">
+                                <li class="menu__mobile-item">
+                                    <a href="home.html" class="menu__mobile-link">
+                                        <span class="menu__mobile-icon fas fa-store-alt"></span>
+                                        <span class="menu__mobile-name">Mua hàng</span>
+                                    </a>
+                                </li>
+    
+                                <li class="menu__mobile-item">
+                                    <a href="Schedule.html" class="menu__mobile-link">
+                                        <span class="menu__mobile-icon fas fa-calendar-alt"></span>
+                                        <span class="menu__mobile-name">Đặt lịch</span>
+                                    </a>
+                                </li>
+    
+                                <li class="menu__mobile-item">
+                                    <a href="contact.html" class="menu__mobile-link">
+                                        <span class="menu__mobile-icon fas fa-headphones-alt"></span>
+                                        <span class="menu__mobile-name">Liên hệ</span>
+                                    </a>
+                                </li>
+    
+                                <li class="menu__mobile-item">
+                                    <a href="About.html" class="menu__mobile-link">
+                                        <span class="menu__mobile-icon fas fa-user"></span>
+                                        <span class="menu__mobile-name">About</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="user__mobile">
+                            <div class="user__mobile-header">
+                                <div class="user__mobile-header-logo">
+                                    <img src="./assets-index/img/HL2.svg" alt="" class="user__mobile-header-img">
+                                </div>
+                                <label for="mobile-user-checkbox" class="user__mobile-header-close">
+                                    <!--<i class="user__mobile-header-icon fas fa-times"></i>-->
+                                    <img src="./assets-index/img/close-black.svg" alt="" class="user__mobile-header-icon">
+                                </label>
+                            </div>
+
+                            <ul class="user__mobile-list">
+                                <li class="user__mobile-item">
+                                    <a href="login.html" class="user__mobile-link">
+                                        <span class="user__mobile-icon fas fa-sign-in-alt"></span>
+                                        <span class="user__mobile-name">Đăng nhập</span>
+                                    </a>
+                                </li>
+
+                                <li class="user__mobile-item">
+                                    <a href="" class="user__mobile-link">
+                                        <span class="user__mobile-icon fas fa-user-plus"></span>
+                                        <span class="user__mobile-name">Đăng ký</span>
+                                    </a>
+                                </li>
+
+                                <li class="user__mobile-item">
+                                    <label for="mobile-user-checkbox" class="user__mobile-link user__mobile-link-cursor">
+                                        <span class="user__mobile-icon fas fa-home"></span>
+                                        <span class="user__mobile-name">Trang chủ</span>
+                                    </label>
+                                </li>
+
+                                <li class="user__mobile-item">
+                                    <a href="" class="user__mobile-link">
+                                        <span class="user__mobile-icon fas fa-adjust"></span>
+                                        <span class="user__mobile-name">Giao diện tối</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="app__container">
+                <div class="introduction-form">
+                    <h1 class="intro-form__header">Giới thiệu về Hồ Lê</h1>
+                    <div class="intro-form__body">
+                        <p class="intro-form__body-content">Hồ Lê là một trang web chuyên cung cấp thuốc và khám bệnh cho mọi đứa trẻ.</p>
+                        <p class="intro-form__body-content">Với phương châm hoạt động “Tất cả vì Khách Hàng”, Hồ Lê 
+                            luôn không ngừng nỗ lực nâng cao chất lượng dịch vụ và sản phẩm, từ đó mang đến trải nghiệm 
+                            mua sắm và điều trị mọi loại bệnh cho trẻ em và cam kết cung cấp hàng chính hãng và dịch 
+                            vụ khám bệnh chất lượng cao.
+                        </p>
+                        <p class="intro-form__body-content">Quý khách có nhu cầu liên lạc, trao đổi hoặc đóng góp ý kiến, vui lòng tham khảo các thông tin sau:</p>
+                        <ul class="intro-form__body-options">
+                            <li class="intro-form__body-list">Liên lạc qua điện thoại: 0918110701</li>
+                            <li class="intro-form__body-list">
+                                Cần trợ giúp: Truy cập 
+                                <a target="_blank" href="Helpcenter.html">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="intro-form__body-list">
+                                Facebook của admin Hồ Lê: 
+                                <a target="_blank" href="https://www.facebook.com/HK1107/">https://www.facebook.com/HK1107/</a>
+                            </li>
+                            <li class="intro-form__body-list">Văn phòng chính: 285/43 Cách Mạng Tháng 8, Phường 12, Quận 10, Thành phố Hồ Chí Minh.</li>
+                        </ul>
+                        <br>
+                        <h3 class="intro-form__body-header">Thông tin về phòng khám</h3>
+                        <ul class="intro-form__body-options">
+                            <li class="intro-form__body-list">Phòng khám Hồ Lê</li>
+                            <li class="intro-form__body-list">Địa chỉ đăng ký kinh doanh:....</li>
+                            <li class="intro-form__body-list">Giấy chứng nhận:....</li>
+                        </ul>
+                        <br>
+                        <h3 class="intro-form__body-header">Phòng khám Hồ Lê</h3>
+                        <div class="contact-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4300393969256!2d106.67753331431705!3d10.778338262106825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f2636c92e1b%3A0x99bcaacc3d4a241c!2zMjg1LCA0MyBDw6FjaCBN4bqhbmcgVGjDoW5nIFTDoW0sIFBoxrDhu51uZyAxMiAoUXXhuq1uIDEwKSwgUXXhuq1uIDEwLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1610667606498!5m2!1svi!2s" width="800" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="grid wide footer__mobile-content">
+                    <div class="row">
+                        <div class="col l-2-4 m-4 c-6">
+                            <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                    <a href="Helpcenter.html" class="footer-item__link">Trung tâm trợ giúp</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Tư vấn khách hàng</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col l-2-4 m-4 c-6">
+                            <h3 class="footer__heading">Phòng khám Hồ Lê</h3>
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Giới thiệu Hồ Lê</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="Comingsoon.html" class="footer-item__link">Tuyển dụng nhân viên</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">Điều khoản Phòng khám</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col l-2-4 m-4 c-6">
+                            <h3 class="footer__heading">Danh mục</h3>
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                    <a href="home.html" class="footer-item__link">Mua hàng</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="Schedule.html" class="footer-item__link">Đặt lịch khám</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="contact.html" class="footer-item__link">Liên hệ phòng khám</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col l-2-4 m-4 c-6">
+                            <h3 class="footer__heading">Theo dõi chúng tôi trên</h3>
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">
+                                        <i class="footer-item__icon fab fa-facebook"></i>
+                                        Facebook
+                                    </a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">
+                                        <i class="footer-item__icon fab fa-instagram"></i>
+                                        Instagram
+                                    </a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="" class="footer-item__link">
+                                        <i class="footer-item__icon fab fa-linkedin"></i>
+                                        LinkedIn
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col l-2-4 m-8 c-12">
+                            <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
+                            <div class="footer__download">
+                                <img src="./assets-index/img/QR.png" alt="QR Download" class="footer__download-qr">
+                                <div class="footer__download-apps">
+                                    <a href="" class="footer__download-app-link">
+                                        <img src="./assets-index/img/Appstore.png" alt="App Store" class="footer__download-app-img">
+                                    </a>
+                                    <a href="" class="footer__download-app-link">
+                                        <img src="./assets-index/img/google-play.png" alt="Google Play" class="footer__download-app-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__bottom">
+                    <div class="grid wide">
+                        <p class="footer__copyright">© 2020 Existing Hồ Lê website. All Rights Reserved | Design by Khoa Hồ</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
